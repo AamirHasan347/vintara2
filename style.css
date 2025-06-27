@@ -91,6 +91,42 @@ h3 {
     font-size: 1.3rem;
   }
 }
+/* Center hero image */
+.parallax-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* so it doesn't block mouse events */
+  z-index: 5;
+}
+
+.parallax-image {
+  height: 100pc;
+  width: 100pc;
+  transition: transform 0.2s ease, scale 0.3s ease;
+  will-change: transform;
+}
+
+/* Vitara Cursor System */
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+}
+
+.circle.cursor-hover {
+  transform: scale(2.2);
+  background-color: #0c4833;
+  border-color: #f6ffec;
+}
+
 /* === VINTARA NAVBAR SYSTEM === */
 .fashion-navbar {
   position: fixed;
@@ -353,7 +389,9 @@ h3 {
   width: 100vw;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 7rem 2.5rem 3rem 2.5rem;
+  padding: 7rem 2.5rem 3rem 0; /* remove left padding */
+  max-width: 1600px; /* or increase if needed */
+  margin-left: 3rem; /* optional */
   gap: 3.5rem;
   height: 100vh;
 }
@@ -365,7 +403,7 @@ h3 {
   align-items: flex-start;
   min-width: 0;
   max-width: 700px;
-  padding-right: 1.5rem;
+  padding-right: 0.5rem;
   text-align: left;
   height: auto;
   animation: heroFadeIn 1.1s cubic-bezier(0.4, 0, 0.2, 1);
@@ -606,6 +644,83 @@ body {
 .feature p {
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+/* Why Us */
+.v-choose-exact {
+  height: 85vh;
+  background: url("images/HOME 3 BACKGROUND.jpg") center center / cover
+    no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #ffffff;
+  font-family: "Public Sans", sans-serif;
+}
+
+.v-choose-inner {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.v-choose-pretitle {
+  font-family: "Playfair Display", cursive, serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.v-choose-heading {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.v-choose-subtext {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.v-choose-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.v-feature {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.v-feature img {
+  height: 55px;
+  margin-bottom: 1rem;
+  filter: brightness(0) invert(1); /* Make white */
+}
+
+.v-feature h4 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.v-feature p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #ffffff;
 }
 
 /* Products Section */
