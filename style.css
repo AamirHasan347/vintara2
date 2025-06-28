@@ -724,121 +724,252 @@ body {
 }
 
 /* Products Section */
-.products {
-  background: var(--secondary);
-  padding: var(--section-padding);
-}
-.products-title {
-  font-family: var(--font-title);
-  font-size: 2.1rem;
-  color: var(--primary);
+.products-section {
+  padding: 4rem 2rem;
+  background: #f6ffec;
+  font-family: "Public Sans", sans-serif;
   text-align: center;
-  margin-bottom: 2.5rem;
-  letter-spacing: 1px;
 }
+
+.products-subtitle {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #0c4833;
+}
+
+.products-title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2.5rem;
+  color: #0c4833;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.product-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #0c4833;
+  padding-bottom: 0.5rem;
+}
+
+.product-categories li {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #0c4833;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.product-categories li:hover {
+  color: #1a664e;
+}
+
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.7rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
+
 .product-card {
-  background: var(--background);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  max-width: 340px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  transition: var(--transition);
-  will-change: transform, box-shadow;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
 }
+
 .product-card:hover {
-  transform: translateY(-10px) scale(1.025);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-6px);
 }
-.product-img {
+
+.product-card img {
   width: 100%;
-  height: 340px;
-  min-height: 220px;
-  object-fit: cover;
-  background: var(--secondary);
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
-  border-bottom: 1px solid var(--secondary);
-  transition: var(--transition);
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
-.product-info {
-  padding: 2.2rem 1.5rem 1.7rem 1.5rem;
+
+.product-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0c4833;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  font-size: 0.9rem;
+  color: #f7c948;
+  margin-bottom: 0.3rem;
+}
+
+.price {
+  font-weight: 600;
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.add-to-cart {
+  background-color: #0c4833;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #083926;
+}
+/* Our Fabric */
+.fabric-section {
+  background: url("images/HOME 5 BACKGROUND.jpg") center center / cover
+    no-repeat;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.fabric-title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0c4833; /* your dark green theme color */
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.fabric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 5rem;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.fabric-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.7rem;
-  flex: 1;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
 }
-.product-name {
-  font-family: var(--font-title);
-  font-size: 1.18rem;
-  color: var(--primary);
-  margin-bottom: 0.2rem;
-  letter-spacing: 0.5px;
+
+.fabric-item img:hover {
+  transform: scale(1.05); /* subtle zoom effect */
 }
-.product-desc {
-  font-size: 1.01rem;
-  color: var(--text);
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-  font-family: var(--font-main);
+
+.fabric-item img {
+  width: 250px; /* Previously 120px or so */
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.product-price {
-  color: var(--accent);
+.fabric-item p {
+  font-family: "Public Sans", sans-serif; /* your text font */
+  font-size: 1.05rem; /* slightly larger */
   font-weight: 600;
-  font-size: 1.08rem;
-  margin-bottom: 0.7rem;
+  color: #0c4833; /* dark green */
+  margin-top: 0.5rem;
+  letter-spacing: 0.3px;
 }
-.product-btn {
-  background: var(--cta);
-  background-image: var(--cta-gradient);
-  color: var(--background);
-  border: none;
-  padding: 0.7rem 1.7rem;
-  border-radius: var(--radius);
-  font-size: 1.05rem;
-  font-family: var(--font-main);
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: var(--transition);
-  margin-top: 0.3rem;
-  box-shadow: 0 1px 6px rgba(193, 154, 107, 0.08);
+
+.fabric-label {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.1rem; /* Previously ~0.9rem */
+  font-weight: 700;
+  color: #0c4833;
+  letter-spacing: 0.4px;
+}
+/* Vintara Stats */
+.vintara-stats-section {
+  background: url("images/HOME 6 Background.jpg") center center/cover no-repeat;
+  padding: 6rem 1rem;
+  color: #0c4833;
+  font-family: "Public Sans", Arial, sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.vintara-stats-overlay {
+  background: rgba(246, 255, 236, 0.85); /* optional soft tint */
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vintara-stats-subtag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #d4f4cf;
+  color: #0c4833;
+  padding: 0.4rem 1rem;
+  border-radius: 12px;
+  font-family: "Public Sans", sans-serif;
   display: inline-block;
+  margin-bottom: 1.2rem;
 }
-.product-btn:hover {
-  background: var(--accent);
-  color: var(--primary);
-  transform: scale(1.04);
-  box-shadow: var(--shadow-hover);
+
+.vintara-stats-title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #0c4833;
 }
-@media (max-width: 1000px) {
-  .product-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
+
+.vintara-stats-description {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #0c4833;
+  line-height: 1.6;
 }
-@media (max-width: 700px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .product-card {
-    max-width: 95vw;
-  }
-  .products {
-    padding: 3.5rem 0 2.5rem 0;
-  }
+
+.vintara-stats-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
+
+.vintara-stat-box {
+  background: #f6ffec;
+  padding: 2rem 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.vintara-stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "League Spartan", sans-serif;
+  color: #0c4833;
+  margin-bottom: 0.5rem;
+}
+
+.vintara-stat-label {
+  font-size: 0.95rem;
+  color: #0c4833;
+}
+
 /* Testimonials Section */
 .testimonials {
   background: var(--background);
