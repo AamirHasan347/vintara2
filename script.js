@@ -1,3 +1,19 @@
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".v-sticky-navbar");
+  if (window.scrollY > 150) {
+    navbar.classList.remove("v-sticky-navbar-transparent");
+    navbar.classList.add("v-sticky-navbar-scrolled");
+  } else {
+    navbar.classList.remove("v-sticky-navbar-scrolled");
+    navbar.classList.add("v-sticky-navbar-transparent");
+  }
+});
+
+// Mobile menu toggle
+// document.getElementById("hamburger").addEventListener("click", function () {
+//   const navLinks = document.querySelector(".nav-links");
+//   navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
+// });
 const img = document.querySelector(".parallax-image");
 const maxMove = 80;
 
@@ -100,5 +116,15 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.add("active");
       }
     });
+  });
+});
+
+// Update the year dynamically
+document.addEventListener("DOMContentLoaded", function () {
+  const year = new Date().getFullYear();
+  const yearElements = document.querySelectorAll(".copyright");
+
+  yearElements.forEach((element) => {
+    element.innerHTML = element.innerHTML.replace("2024", year);
   });
 });

@@ -68,17 +68,20 @@
       <div class="premium-hero-bg"></div>
       <div class="premium-hero-content">
         <div class="premium-hero-left">
-          <div class="hero-intro">
+          <!-- <div class="hero-intro">
             Crafted with Care... Designed with Radiance and Expressed with
             Love...
-          </div>
+          </div> -->
           <h1 class="hero-main-heading">ELEVATE YOUR BRAND PRESENCE</h1>
           <div class="hero-subheading">
-            It's all that your brand needs to be more than Generic.<br />Make
-            your Brand recognisable with
+            Crafted with Care... Designed with Radiance and Expressed <br />
+            with Love... It's all that your brand needs to be more than
+            Generic.<br />Make your Brand recognisable with
           </div>
           <div class="hero-brand">VINTARA INTERNATIONAL</div>
-          <a href="#products" class="v-btn hero-cta">Our Products</a>
+          <a href="#products" class="v-btn hero-cta" id="productBtn"
+            >Our Products</a
+          >
           <div class="hero-feature-row">
             <div class="hero-feature-item">
               <span class="hero-feature-icon">✔️</span> 100% PREMIUM QUALITY
@@ -123,7 +126,7 @@
             <img
               src="images/HOME 2 ELEMENTS NEW/1.svg"
               alt="Eco-Friendly Icon"
-              class="feature-icon"
+              class="about-feature-icon"
             />
             <h3>1. Eco-Friendly</h3>
             <p>
@@ -135,7 +138,7 @@
             <img
               src="images/HOME 2 ELEMENTS NEW/2.svg"
               alt="Eco-Friendly Icon"
-              class="feature-icon"
+              class="about-feature-icon"
             />
             <h3>2. Reusable</h3>
             <p>
@@ -147,7 +150,7 @@
             <img
               src="images/HOME 2 ELEMENTS NEW/3.svg"
               alt="Eco-Friendly Icon"
-              class="feature-icon"
+              class="about-feature-icon"
             />
             <h3>3. Handcrafted</h3>
             <p>
@@ -159,7 +162,7 @@
             <img
               src="images/HOME 2 ELEMENTS NEW/4.svg"
               alt="Eco-Friendly Icon"
-              class="feature-icon"
+              class="about-feature-icon"
             />
             <h3>4. Elegantly Classic</h3>
             <p>
@@ -287,6 +290,7 @@
     <!-- Our Fabric -->
     <section class="fabric-section">
       <div class="fabric-header">
+        <div class="fabric-intro">We deal with the following</div>
         <p class="fabric-title">TYPE OF FABRIC</p>
       </div>
 
@@ -366,9 +370,35 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="v-faq-section">
-      <div class="v-faq-bg"></div>
-      <div class="v-faq-content">
+    <section class="v-faq-section" id="faq">
+      <!-- Decorative elements -->
+      <svg
+        class="v-faq-decoration v-faq-leaf-1"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"
+          stroke="#0c4833"
+          stroke-width="1.5"
+        />
+      </svg>
+
+      <svg
+        class="v-faq-decoration v-faq-leaf-2"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"
+          stroke="#0c4833"
+          stroke-width="1.5"
+        />
+      </svg>
+
+      <div class="v-faq-container">
         <div class="v-faq-header">
           <h2>Frequently Asked Questions</h2>
           <p>
@@ -381,15 +411,14 @@
           <div class="v-faq-item">
             <button class="v-faq-question">
               Why are the bags' dimensions not mentioned on our website?
-              <div class="v-faq-icon">
-                <span class="horizontal"></span>
-                <span class="vertical"></span>
-              </div>
+              <span class="v-faq-icon"></span>
             </button>
             <div class="v-faq-answer">
-              <p>
-                All the bags are fully customisable according to your needs.
-              </p>
+              <div class="v-faq-answer-content">
+                <p>
+                  All the bags are fully customisable according to your needs.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -397,16 +426,15 @@
           <div class="v-faq-item">
             <button class="v-faq-question">
               What is the Minimum Order Quantity (MOQ)?
-              <div class="v-faq-icon">
-                <span class="horizontal"></span>
-                <span class="vertical"></span>
-              </div>
+              <span class="v-faq-icon"></span>
             </button>
             <div class="v-faq-answer">
-              <p>
-                1000 pieces are necessary for delivery within India, and 3000
-                for delivery outside India.
-              </p>
+              <div class="v-faq-answer-content">
+                <p>
+                  1000 pieces are necessary for delivery within India, and 3000
+                  for delivery outside India.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -414,17 +442,16 @@
           <div class="v-faq-item">
             <button class="v-faq-question">
               Can I get Samples?
-              <div class="v-faq-icon">
-                <span class="horizontal"></span>
-                <span class="vertical"></span>
-              </div>
+              <span class="v-faq-icon"></span>
             </button>
             <div class="v-faq-answer">
-              <p>
-                Certainly! The order can be completed within a week, including
-                customised prints. Sample and screen setup charges may vary
-                based on specific requirements.
-              </p>
+              <div class="v-faq-answer-content">
+                <p>
+                  Certainly! The order can be completed within a week, including
+                  customised prints. Sample and screen setup charges may vary
+                  based on specific requirements.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -432,16 +459,15 @@
           <div class="v-faq-item">
             <button class="v-faq-question">
               What are the other customisations I can get?
-              <div class="v-faq-icon">
-                <span class="horizontal"></span>
-                <span class="vertical"></span>
-              </div>
+              <span class="v-faq-icon"></span>
             </button>
             <div class="v-faq-answer">
-              <p>
-                We offer customised handles, charms, chains, buttons and
-                ribbons.
-              </p>
+              <div class="v-faq-answer-content">
+                <p>
+                  We offer customised handles, charms, chains, buttons and
+                  ribbons.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -449,17 +475,16 @@
           <div class="v-faq-item">
             <button class="v-faq-question">
               Do you offer branding and labelling services for us?
-              <div class="v-faq-icon">
-                <span class="horizontal"></span>
-                <span class="vertical"></span>
-              </div>
+              <span class="v-faq-icon"></span>
             </button>
             <div class="v-faq-answer">
-              <p>
-                Yes, we can produce and stitch custom labels, barcode stickers,
-                and hang tags upon request. Please note that these will incur
-                additional charges.
-              </p>
+              <div class="v-faq-answer-content">
+                <p>
+                  Yes, we can produce and stitch custom labels, barcode
+                  stickers, and hang tags upon request. Please note that these
+                  will incur additional charges.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -467,24 +492,23 @@
           <div class="v-faq-item">
             <button class="v-faq-question">
               What details should I provide for a precise quotation?
-              <div class="v-faq-icon">
-                <span class="horizontal"></span>
-                <span class="vertical"></span>
-              </div>
+              <span class="v-faq-icon"></span>
             </button>
             <div class="v-faq-answer">
-              <p>
-                For an accurate quote, please provide the following details:
-              </p>
-              <ul>
-                <li>Type of Fabric</li>
-                <li>Bag dimensions</li>
-                <li>Colour of the fabric</li>
-                <li>Handle type and length</li>
-                <li>Print details with the artwork file</li>
-                <li>Quantity</li>
-                <li>Full details with postal code</li>
-              </ul>
+              <div class="v-faq-answer-content">
+                <p>
+                  For an accurate quote, please provide the following details:
+                </p>
+                <ul>
+                  <li>Type of Fabric</li>
+                  <li>Bag dimensions</li>
+                  <li>Colour of the fabric</li>
+                  <li>Handle type and length</li>
+                  <li>Print details with the artwork file</li>
+                  <li>Quantity</li>
+                  <li>Full details with postal code</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -492,16 +516,15 @@
           <div class="v-faq-item">
             <button class="v-faq-question">
               What are the delivery terms?
-              <div class="v-faq-icon">
-                <span class="horizontal"></span>
-                <span class="vertical"></span>
-              </div>
+              <span class="v-faq-icon"></span>
             </button>
             <div class="v-faq-answer">
-              <p>
-                We offer the following delivery terms: Ex-factory, FOB Kolkata
-                Port, CNF and CIF.
-              </p>
+              <div class="v-faq-answer-content">
+                <p>
+                  We offer the following delivery terms: Ex-factory, FOB Kolkata
+                  Port, CNF and CIF.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -509,18 +532,17 @@
           <div class="v-faq-item">
             <button class="v-faq-question">
               How can I be assured of the quality?
-              <div class="v-faq-icon">
-                <span class="horizontal"></span>
-                <span class="vertical"></span>
-              </div>
+              <span class="v-faq-icon"></span>
             </button>
             <div class="v-faq-answer">
-              <p>
-                At Vintara International, we ensure top-notch quality through
-                multi-stage in-house inspections before dispatch. We use only
-                premium natural jute and eco-friendly dyes for printing,
-                combining quality with sustainability.
-              </p>
+              <div class="v-faq-answer-content">
+                <p>
+                  At Vintara International, we ensure top-notch quality through
+                  multi-stage in-house inspections before dispatch. We use only
+                  premium natural jute and eco-friendly dyes for printing,
+                  combining quality with sustainability.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -568,73 +590,37 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer-brand">
-          <span class="footer-logo">Vintara</span>
+    <!-- Footer Section -->
+    <!-- <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Contact Details:</h4>
+          <p>Phone: +91 9304930058<br />Email: nazeeranwarwork@gmail.com</p>
         </div>
-        <nav class="footer-nav">
-          <a href="#" class="footer-link">Home</a>
-          <a href="#products" class="footer-link">Shop</a>
-          <a href="#about" class="footer-link">About</a>
-          <a href="#contact" class="footer-link">Contact</a>
-        </nav>
-        <div class="footer-social">
-          <a href="#" class="footer-social-link" aria-label="Instagram">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="2" y="2" width="20" height="20" rx="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-            </svg>
-          </a>
-          <a href="#" class="footer-social-link" aria-label="Pinterest">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M8.72 21c.28-1.81 1.8-7.64 1.8-7.64a3.36 3.36 0 0 1-.28-1.39c0-1.3.75-2.27 1.68-2.27.79 0 1.17.59 1.17 1.3 0 .79-.5 1.97-.76 3.07-.22.93.47 1.69 1.39 1.69 1.67 0 2.95-1.76 2.95-4.3 0-2.25-1.62-3.82-3.94-3.82-2.69 0-4.14 2.01-4.14 4.09 0 .81.31 1.68.7 2.15.08.1.09.19.07.29-.08.32-.25 1.01-.29 1.15-.05.19-.15.23-.34.14-1.27-.59-2.06-2.44-2.06-3.93 0-3.2 2.33-6.14 6.7-6.14 3.51 0 6.24 2.5 6.24 5.84 0 3.49-2.2 6.29-5.25 6.29-1.05 0-2.04-.55-2.38-1.18l-.65 2.47c-.19.7-.57 1.58-.85 2.12.64.2 1.31.31 2.01.31 5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12c0 4.41 3.58 8 8 8z"
-              />
-            </svg>
-          </a>
-          <a href="#" class="footer-social-link" aria-label="LinkedIn">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="2" y="2" width="20" height="20" rx="5" />
-              <path d="M16 8a6 6 0 0 1 6 6v6" />
-              <line x1="8" y1="11" x2="8" y2="16" />
-              <line x1="8" y1="8" x2="8" y2="8.01" />
-              <line x1="12" y1="11" x2="12" y2="16" />
-              <line x1="12" y1="8" x2="12" y2="8.01" />
-            </svg>
-          </a>
+
+        <div class="footer-logo">
+          <img src="images/VINTARA SVG WEBSITE.svg" alt="Vintara Logo" />
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Address:</h4>
+          <p>Kolkata, West Bengal.</p>
         </div>
       </div>
-      <div class="footer-bottom">© 2025 Vintara – All Rights Reserved</div>
-    </footer>
+
+      <div class="footer-bottom">
+        <p>
+          Redefining corporate gifting with sustainability, style, and purpose.
+        </p>
+      </div>
+    </footer> -->
   </body>
   <script src="script.js"></script>
 </html>

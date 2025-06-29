@@ -29,6 +29,7 @@ body {
   letter-spacing: 0.01em;
   transition: var(--transition);
 }
+
 header,
 section,
 footer {
@@ -102,8 +103,8 @@ h3 {
 }
 
 .parallax-image {
-  height: 100pc;
-  width: 100pc;
+  height: 80pc;
+  width: 80pc;
   transition: transform 0.2s ease, scale 0.3s ease;
   will-change: transform;
 }
@@ -281,7 +282,7 @@ h3 {
 }
 .hero-brand {
   font-family: "League Spartan", "Playfair Display", Arial, sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 900;
   color: #0c4833;
   letter-spacing: 2px;
@@ -306,7 +307,7 @@ h3 {
   font-size: 0.8rem;
   color: #0c4833;
   font-weight: 600;
-  background: rgba(246, 255, 236, 0.85);
+  background: transparent;
   border-radius: 6px;
   padding: 0.45em 1.1em;
   box-shadow: 0 1px 6px 0 rgba(12, 72, 51, 0.06);
@@ -351,7 +352,7 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background-image: url("images/HOME 2 BACKGROUND.jpg");
+  background-image: url("images/HOME 2 BACKGROUND NEW.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -406,6 +407,12 @@ body {
   transform: translateY(40px);
   transition: var(--transition);
 }
+
+.about-feature-icon {
+  width: 100px;
+  height: 100px;
+}
+
 .about-text-col.visible {
   opacity: 1;
   transform: translateY(0);
@@ -522,7 +529,7 @@ body {
 }
 
 .v-feature img {
-  height: 55px;
+  height: 9 5px;
   margin-bottom: 1rem;
   filter: brightness(0) invert(1); /* Make white */
 }
@@ -685,6 +692,16 @@ body {
   gap: 0.8rem;
 }
 
+.fabric-intro {
+  font-family: "Playfair Display", cursive, serif;
+  font-size: 1.6rem;
+  color: #0c4833;
+  font-style: italic;
+  /* margin-bottom: 1.1em; */
+  opacity: 0.85;
+  /* z-index: 10000; */
+}
+
 .fabric-item img:hover {
   transform: scale(1.05); /* subtle zoom effect */
 }
@@ -699,7 +716,7 @@ body {
 }
 .fabric-item p {
   font-family: "Public Sans", sans-serif; /* your text font */
-  font-size: 1.05rem; /* slightly larger */
+  font-size: 1.5rem; /* slightly larger */
   font-weight: 600;
   color: #0c4833; /* dark green */
   margin-top: 0.5rem;
@@ -761,8 +778,8 @@ body {
 }
 
 .vintara-stat-box {
-  background: #f6ffec;
-  padding: 2rem 2.5rem;
+  background: #ffffff;
+  /* padding: 2rem 2.5rem; */
   border-radius: 2rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
   flex: 1 1 250px;
@@ -1121,15 +1138,29 @@ button:not(.testimonial-dot):focus {
   left: 0;
   width: 100%;
   z-index: 999;
-  background: rgba(246, 255, 236, 0.75);
-  box-shadow: 0 8px 32px 0 rgba(12, 72, 51, 0.13);
-  backdrop-filter: blur(16px) saturate(1.2);
-  height: 130px;
+  /* background: transparent;
+  backdrop-filter: blur(16px) saturate(1.2); */
+  height: 100px;
   display: flex;
   align-items: center;
   font-family: "Public Sans", sans-serif;
   box-shadow: none;
   backdrop-filter: none;
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Initial transparent state */
+.v-sticky-navbar-transparent {
+  background: transparent;
+  backdrop-filter: blur(0);
+}
+
+/* Scrolled state */
+.v-sticky-navbar-scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(12, 72, 51, 0.1);
 }
 
 .v-navbar-inner {
@@ -1336,59 +1367,54 @@ button:not(.testimonial-dot):focus {
 }
 
 /* =============== FAQ SECTION =============== */
+/* FAQ Section Styles */
 .v-faq-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 5.5rem 1rem;
+  background-color: #f6ffec;
   position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
 
-.v-faq-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("images/HOME 8 BACKGROUND.jpg") center center / cover
-    no-repeat fixed;
-  z-index: -1;
-  opacity: 0.15;
-}
-
-.v-faq-content {
-  background: var(--pista);
-  border-radius: 20px;
-  padding: 50px;
-  max-width: 1000px;
+.v-faq-container {
+  max-width: 900px;
   margin: 0 auto;
-  box-shadow: 0 10px 50px rgba(12, 72, 51, 0.1);
   position: relative;
   z-index: 2;
-  border: 1px solid rgba(12, 72, 51, 0.1);
 }
 
 .v-faq-header {
   text-align: center;
-  margin-bottom: 50px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid rgba(12, 72, 51, 0.1);
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.v-faq-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #0c4833;
+  border-radius: 2px;
 }
 
 .v-faq-header h2 {
   font-family: "League Spartan", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 15px;
-  color: var(--dark-green);
+  margin-bottom: 1rem;
+  color: #0c4833;
   letter-spacing: -0.5px;
 }
 
 .v-faq-header p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
-  color: var(--dark-green);
+  color: #0c4833;
   opacity: 0.9;
 }
 
@@ -1399,8 +1425,8 @@ button:not(.testimonial-dot):focus {
 
 .v-faq-item {
   background: white;
-  border-radius: 15px;
-  margin-bottom: 20px;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
   box-shadow: 0 5px 20px rgba(12, 72, 51, 0.05);
   overflow: hidden;
   border: 1px solid rgba(12, 72, 51, 0.08);
@@ -1409,13 +1435,13 @@ button:not(.testimonial-dot):focus {
 
 .v-faq-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(12, 72, 51, 0.12);
+  box-shadow: 0 8px 25px rgba(12, 72, 51, 0.1);
 }
 
 .v-faq-question {
   width: 100%;
   text-align: left;
-  padding: 24px 30px;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -1423,9 +1449,9 @@ button:not(.testimonial-dot):focus {
   justify-content: space-between;
   align-items: center;
   font-family: "League Spartan", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  color: var(--dark-green);
+  color: #0c4833;
   background-color: rgba(12, 72, 51, 0.02);
   transition: background-color 0.3s ease;
 }
@@ -1439,90 +1465,104 @@ button:not(.testimonial-dot):focus {
   height: 24px;
   position: relative;
   flex-shrink: 0;
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
-.v-faq-icon span {
+.v-faq-icon::before,
+.v-faq-icon::after {
+  content: "";
   position: absolute;
-  display: block;
-  background: var(--dark-green);
+  background-color: #0c4833;
   transition: all 0.3s ease;
   border-radius: 2px;
 }
 
-.v-faq-icon .horizontal {
-  width: 24px;
-  height: 3px;
-  top: 10.5px;
+.v-faq-icon::before {
+  top: 50%;
   left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
 }
 
-.v-faq-icon .vertical {
-  width: 3px;
-  height: 24px;
-  left: 10.5px;
+.v-faq-icon::after {
   top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
 }
 
-.v-faq-item.active .vertical {
-  transform: rotate(90deg);
+.v-faq-item.active .v-faq-icon::after {
   opacity: 0;
+  transform: translateX(-50%) rotate(90deg);
 }
 
 .v-faq-answer {
-  padding: 0 30px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  color: var(--dark-green);
-  font-size: 1.1rem;
+  transition: max-height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  color: #0c4833;
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 
 .v-faq-item.active .v-faq-answer {
-  padding: 0 30px 25px;
   max-height: 500px;
 }
 
+.v-faq-answer-content {
+  padding: 0 2rem 1.5rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease 0.1s;
+}
+
+.v-faq-item.active .v-faq-answer-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .v-faq-answer p {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .v-faq-answer ul {
-  padding-left: 25px;
-  margin: 15px 0;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 .v-faq-answer li {
-  margin-bottom: 10px;
+  margin-bottom: 0.8rem;
   position: relative;
 }
 
 .v-faq-answer li::before {
   content: "•";
   position: absolute;
-  left: -15px;
-  color: var(--dark-green);
+  left: -1rem;
+  color: #0c4833;
   font-weight: bold;
 }
 
 /* Decorative elements */
-.v-leaf-decoration {
+.v-faq-decoration {
   position: absolute;
   z-index: 1;
-  opacity: 0.15;
+  opacity: 0.05;
+  pointer-events: none;
 }
 
-.v-leaf-1 {
-  top: 20px;
-  left: 20px;
+.v-faq-leaf-1 {
+  top: 40px;
+  left: 10%;
   width: 120px;
   transform: rotate(15deg);
 }
 
-.v-leaf-2 {
-  bottom: 20px;
-  right: 20px;
+.v-faq-leaf-2 {
+  bottom: 40px;
+  right: 10%;
   width: 100px;
   transform: rotate(-20deg);
 }
@@ -1530,15 +1570,11 @@ button:not(.testimonial-dot):focus {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .v-faq-section {
-    padding: 50px 15px;
-  }
-
-  .v-faq-content {
-    padding: 30px;
+    padding: 4rem 1rem;
   }
 
   .v-faq-header h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .v-faq-header p {
@@ -1546,50 +1582,100 @@ button:not(.testimonial-dot):focus {
   }
 
   .v-faq-question {
-    font-size: 1.1rem;
-    padding: 18px 20px;
+    font-size: 1.05rem;
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
   }
 
   .v-faq-answer {
     font-size: 1rem;
   }
 
-  .v-faq-item.active .v-faq-answer {
-    padding: 0 20px 20px;
+  .v-faq-answer-content {
+    padding: 0 1.5rem 1.25rem;
   }
 }
 
 @media (max-width: 480px) {
   .v-faq-section {
-    padding: 40px 10px;
-  }
-
-  .v-faq-content {
-    padding: 20px;
+    padding: 3rem 1rem;
   }
 
   .v-faq-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .v-faq-question {
     font-size: 1rem;
-    padding: 16px 18px;
+    padding: 1.1rem 1.1rem 1.1rem 1.3rem;
   }
 
   .v-faq-icon {
     width: 20px;
     height: 20px;
-    margin-left: 15px;
   }
+}
 
-  .v-faq-icon .horizontal {
-    width: 20px;
-    top: 8.5px;
-  }
+/* =================================Footer Section======================================= */
+/* Footer Styling */
+.site-footer {
+  background: url("images/END BACKGROUND.jpg") center center / cover no-repeat;
+  padding: 4rem 2rem;
+  color: #f6ffec;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
 
-  .v-faq-icon .vertical {
-    height: 20px;
-    left: 8.5px;
-  }
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f6ffec;
+  margin-bottom: 0.6rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.footer-column p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f6ffec;
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  color: #f6ffec;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+/* Bottom line */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #f6ffec;
+  font-style: italic;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
 }
