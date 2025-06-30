@@ -346,7 +346,7 @@ h3 {
 /* Hero section 2 */
 .v-hero-alt {
   display: none;
-  background: url("images/HOME 2 CENTRE IMAGE NEW.jpg") center center / cover
+  background: url("images/HERO 2 BACKGROUND.jpg") center center / cover
     no-repeat; /* Replace with your hero image */
   color: #0c4833; /* Dark green */
   font-family: "Public Sans", sans-serif;
@@ -374,7 +374,7 @@ h3 {
   font-family: "League Spartan", sans-serif;
   font-size: 2.8rem;
   font-weight: 800;
-  color: #0c4833;
+  color: #ffffff;
   margin-bottom: 1.2rem;
 }
 
@@ -383,13 +383,14 @@ h3 {
   max-width: 700px;
   line-height: 1.6;
   margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 .v-hero-alt-brand {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.4;
-  color: #0c4833;
+  color: #ffffff;
 }
 
 .v-hero-alt-brand span {
@@ -398,7 +399,7 @@ h3 {
   font-size: 1.8rem;
   font-weight: 800;
   margin-top: 0.5rem;
-  color: #0c4833;
+  color: #ffffff;
 }
 
 .v-hero-alt-features {
@@ -415,10 +416,10 @@ h3 {
 
 .v-hero-alt-feature {
   background: rgba(12, 72, 51, 0.08);
-  border: 1px solid #0c4833;
+  border: 1px solid #ffffff;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
-  color: #0c4833;
+  color: #ffffff;
 }
 
 /* Responsive Tweaks */
