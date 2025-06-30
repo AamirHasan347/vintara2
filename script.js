@@ -20,6 +20,24 @@ document.addEventListener("DOMContentLoaded", function () {
   updateNavbar(); // run once on load
 });
 
+// To switch the Hero 1 section with Hero 2 section for screen under 1660 px
+
+function toggleHeroSection() {
+  const standardHero = document.querySelector(".premium-hero");
+  const altHero = document.getElementById("v-hero-alt");
+
+  if (window.innerWidth <= 1660) {
+    standardHero.style.display = "none";
+    altHero.style.display = "block";
+  } else {
+    standardHero.style.display = "flex";
+    altHero.style.display = "none";
+  }
+}
+
+window.addEventListener("resize", toggleHeroSection);
+window.addEventListener("DOMContentLoaded", toggleHeroSection);
+
 // Mobile menu toggle functionality
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("vNavbarHamburger");

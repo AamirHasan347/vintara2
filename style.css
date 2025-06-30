@@ -343,6 +343,105 @@ h3 {
   }
 }
 
+/* Hero section 2 */
+.v-hero-alt {
+  display: none;
+  background: url("images/HOME 2 CENTRE IMAGE NEW.jpg") center center / cover
+    no-repeat; /* Replace with your hero image */
+  color: #0c4833; /* Dark green */
+  font-family: "Public Sans", sans-serif;
+  height: 100vh;
+  width: 100%;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.v-hero-alt-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.v-hero-alt-text {
+  margin-top: 5rem;
+}
+
+.v-hero-alt-heading {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0c4833;
+  margin-bottom: 1.2rem;
+}
+
+.v-hero-alt-subtext {
+  font-size: 1.1rem;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.v-hero-alt-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #0c4833;
+}
+
+.v-hero-alt-brand span {
+  display: inline-block;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  color: #0c4833;
+}
+
+.v-hero-alt-features {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Public Sans", sans-serif;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.v-hero-alt-feature {
+  background: rgba(12, 72, 51, 0.08);
+  border: 1px solid #0c4833;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  color: #0c4833;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .v-hero-alt-heading {
+    font-size: 2rem;
+  }
+  .v-hero-alt-subtext {
+    font-size: 1rem;
+  }
+  .v-hero-alt-brand {
+    font-size: 1.3rem;
+  }
+  .v-hero-alt-brand span {
+    font-size: 1.5rem;
+  }
+  .v-hero-alt-features {
+    flex-direction: column;
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
+
 /* About Section */
 /* Prevent X-axis scrolling */
 body {
@@ -732,6 +831,40 @@ body {
   color: #0c4833; /* dark green */
   margin-top: 0.5rem;
   letter-spacing: 0.3px;
+}
+
+/* === FIX: Fabric section horizontal scroll with full visibility and edge padding === */
+@media (max-width: 768px) {
+  .fabric-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .fabric-grid::before,
+  .fabric-grid::after {
+    content: "";
+    flex: 0 0 1rem;
+  }
+
+  .fabric-item {
+    min-width: 220px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 1rem;
+  }
+
+  .fabric-item img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .fabric-item p {
+    font-size: 1rem;
+  }
 }
 
 /* Vintara Stats */
