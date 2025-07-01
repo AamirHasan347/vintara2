@@ -1,25 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".v-sticky-navbar");
+window.addEventListener("scroll", function () {
+  const navbar = document.getElementById("StickyNavbar");
+  // const logo = document.getElementById("navbarLogo");
+  const links = document.querySelectorAll(".v-navbar-link");
+  const scrolled = window.scrollY > 80;
 
-  if (!navbar) {
-    console.error("Navbar element not found");
-    return;
+  if (scrolled) {
+    navbar.classList.add("v-sticky-navbar-scrolled");
+    navbar.classList.remove("v-sticky-navbar-transparent");
+    // logo.src = "images/vintaraLogoGreen.svg";
+    links.forEach((link) => (link.style.color = "#0c4833"));
+  } else {
+    navbar.classList.remove("v-sticky-navbar-scrolled");
+    navbar.classList.add("v-sticky-navbar-transparent");
+    // logo.src = "images/vintaraLogoWhite";
+    links.forEach((link) => (link.style.color = "#ffffff"));
   }
-
-  function updateNavbar() {
-    if (window.scrollY > 20) {
-      navbar.classList.add("v-sticky-navbar-scrolled");
-      navbar.classList.remove("v-sticky-navbar-transparent");
-    } else {
-      navbar.classList.remove("v-sticky-navbar-scrolled");
-      navbar.classList.add("v-sticky-navbar-transparent");
-    }
-  }
-
-  window.addEventListener("scroll", updateNavbar);
-  updateNavbar(); // run once on load
 });
-
 // To switch the Hero 1 section with Hero 2 section for screen under 1660 px
 
 function toggleHeroSection() {
