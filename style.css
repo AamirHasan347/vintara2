@@ -1097,110 +1097,105 @@ body {
   }
 }
 /* Footer */
-.footer {
-  background: var(--primary);
-  color: var(--secondary);
-  padding: 2.5rem 0 1.2rem 0;
-  font-size: 1rem;
-  letter-spacing: 1px;
+.v-footer {
+  background-image: url("images/footerBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #f6ffec;
+  font-family: "Public Sans", sans-serif;
+  padding: 4rem 2rem 2rem 2rem;
 }
-.footer-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--container-max);
+
+.v-footer-container {
+  max-width: 1280px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
-}
-.footer-brand {
-  flex: 1 1 180px;
-  display: flex;
-  align-items: center;
-}
-.footer-logo {
-  font-family: var(--font-title);
-  font-size: 2rem;
-  color: var(--accent);
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-.footer-nav {
-  flex: 1 1 300px;
-  display: flex;
-  gap: 2.2rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.footer-link {
-  color: var(--secondary);
-  text-decoration: none;
-  font-family: var(--font-main);
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: var(--transition);
-  opacity: 0.85;
-}
-.footer-link:hover {
-  color: var(--accent);
-  opacity: 1;
-}
-.footer-social {
-  flex: 1 1 180px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.2rem;
-}
-.footer-social-link {
-  color: var(--secondary);
-  opacity: 0.7;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-}
-.footer-social-link:hover {
-  color: var(--accent);
-  opacity: 1;
-}
-.footer-bottom {
   text-align: center;
-  color: var(--accent);
-  font-size: 1rem;
-  margin-top: 2.2rem;
-  letter-spacing: 1px;
-  opacity: 0.85;
 }
-@media (max-width: 900px) {
-  .footer-container {
+
+.v-footer-column {
+  flex: 1 1 300px;
+  color: #f6ffec;
+}
+
+.v-footer-column h4 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.v-footer-column p,
+.v-footer-column a {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f6ffec;
+  text-decoration: none;
+}
+
+.v-footer-column a:hover {
+  text-decoration: underline;
+}
+
+.v-footer-logo img {
+  max-height: 150px; /* Increased from 100px */
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.v-footer-logo img:hover {
+  transform: scale(1.05);
+}
+
+.v-footer-social {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.v-footer-social a {
+  color: #f6ffec;
+  margin: 0 12px;
+  font-size: 1.3rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.v-footer-social a:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: #e4f3db;
+}
+
+.v-footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Playfair Display", cursive;
+  font-size: 1.05rem;
+  color: #f6ffec;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .v-footer-container {
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    text-align: center;
   }
-  .footer-brand,
-  .footer-nav,
-  .footer-social {
-    justify-content: center;
-    width: 100%;
+
+  .v-footer-column {
+    flex: 1 1 100%;
   }
-  .footer-nav {
-    gap: 1.1rem;
-  }
-  .footer-logo {
-    font-size: 1.4rem;
+
+  .v-footer-logo img {
+    max-height: 90px;
   }
 }
-@media (max-width: 600px) {
-  .footer {
-    padding: 1.5rem 0 0.7rem 0;
-  }
-  .footer-bottom {
-    font-size: 0.95rem;
-    margin-top: 1.2rem;
-  }
-}
+
 /* === VINTARA BUTTON SYSTEM === */
 .v-btn,
 button:not(.testimonial-dot) {
