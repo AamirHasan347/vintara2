@@ -137,6 +137,7 @@ body {
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
+  text-decoration: none; /* ✅ Fix underline */
 }
 .v-btn.v-navbar-enquire:hover {
   background: white;
@@ -518,7 +519,6 @@ body {
   }
 }
 
-/* Testimonials */
 .testimonial-section {
   background-color: #0c4833;
   color: #f6ffec;
@@ -535,31 +535,35 @@ body {
   color: #f6ffec;
 }
 
-.testimonial-slider {
+/* Carousel Wrapper */
+.testimonial-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track Animation */
+.testimonial-track {
   display: flex;
+  animation: scrollSlider 50s linear infinite;
   gap: 2rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  width: max-content;
 }
 
 .testimonial-card {
-  scroll-snap-align: center;
+  flex: 0 0 600px;
+  min-height: 320px;
   background-color: #ffffff;
   color: #0c4833;
   border-radius: 8px;
-  flex: 0 0 600px;
-  min-height: 300px;
   display: flex;
   flex-direction: row;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  text-align: left;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.02);
 }
 
 .testimonial-image {
@@ -598,6 +602,7 @@ body {
   color: #333;
 }
 
+/* Button below */
 .testimonial-cta {
   margin-top: 3rem;
 }
@@ -615,6 +620,16 @@ body {
 
 .btn-green:hover {
   background-color: #e4f3db;
+}
+
+/* Animation */
+@keyframes scrollSlider {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Responsive */
@@ -645,6 +660,22 @@ body {
 
   .testimonial-content .quote {
     font-size: 0.95rem;
+  }
+}
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Stack layout (mobile) — make top corners rounded */
+@media (max-width: 768px) {
+  .testimonial-image img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
   }
 }
 .vision-mission {
@@ -777,7 +808,7 @@ body {
 }
 
 .v-footer-logo img {
-  max-height: 150px; /* Increased from 100px */
+  max-height: 200px; /* Increased from 100px */
   margin: 0 auto;
   display: block;
   transition: transform 0.3s ease;

@@ -1142,7 +1142,7 @@ body {
 }
 
 .v-footer-logo img {
-  max-height: 150px; /* Increased from 100px */
+  max-height: 200px; /* Increased from 100px */
   margin: 0 auto;
   display: block;
   transition: transform 0.3s ease;
