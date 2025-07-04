@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-dvN1EwY1Tb+pXNEzU9IimM5/fTzvVboTQOljm8G+ef6kl7QjxXl8DJm4P9g5OAoI+uEAcvWE58WqE2sW+z+z1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
+    <!-- Sticky Premium Navbar -->
+    <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
+      <div class="v-navbar-inner">
+        <div class="v-navbar-left">
+          <!-- Two logos, toggle visibility with CSS -->
+          <img
+            src="images/vintaraLogoWhite.svg"
+            alt="Vintara Logo White"
+            class="v-navbar-logo logo-white"
+          />
+          <img
+            src="images/vintaraLogoGreen.svg"
+            alt="Vintara Logo Green"
+            class="v-navbar-logo logo-green"
+          />
+
+          <ul class="v-navbar-menu" id="navbarLinks">
+            <li><a href="index.html" class="v-navbar-link">Home</a></li>
+            <li><a href="#products" class="v-navbar-link">Products</a></li>
+            <li><a href="about.html" class="v-navbar-link">About Us</a></li>
+            <li><a href="#blog" class="v-navbar-link">Blog</a></li>
+          </ul>
+        </div>
+        <div class="v-navbar-right">
+          <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
+          <button
+            class="v-navbar-hamburger"
+            id="vNavbarHamburger"
+            aria-label="Open menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
+        <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
+          <ul>
+            <li><a href="index.html" class="v-navbar-link">Home</a></li>
+            <li><a href="#products" class="v-navbar-link">Products</a></li>
+            <li><a href="about.html" class="v-navbar-link">About Us</a></li>
+            <li><a href="blog.html" class="v-navbar-link">Blog</a></li>
+            <li>
+              <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BLOG MAIN PAGE SECTION -->
+    <section class="blog-hero">
+      <div class="blog-hero-overlay">
+        <h1>KEEP UP WITH VINTARA</h1>
+      </div>
+    </section>
+
+    <section class="blog-intro">
+      <h2>The Blog</h2>
+      <p>Welcome to the Vintara International blog!</p>
+      <p>
+        If you’re someone who loves beautiful things but wants to protect our
+        planet at the same time, you’re in the perfect spot. Here, we believe
+        style and sustainability can go hand in hand… no compromises needed.
+      </p>
+      <p>
+        This is your go-to space for clever eco-tips, inspiring stories behind
+        our handcrafted jute products, and fresh ideas for thoughtful gifting
+        and packaging that truly make a difference.
+      </p>
+      <p>
+        So, pour yourself a cup of chai or coffee, settle in, and join us on
+        this journey to create positive change - one bag, one choice, one step
+        at a time. Because together, we can carry change that matters.
+      </p>
+    </section>
+    <!-- BLOG CARD GRID SECTION -->
+    <section class="blog-grid">
+      <div class="blog-card">
+        <a href="Blogs/blog1.html" style="text-decoration: none">
+          <img src="images/BLOG 1 HERO.png" alt="Blog Post 1" />
+          <div class="blog-card-content">
+            <h3>
+              Wrap It with Care: The Eco-Gifting Trend Making All the Difference
+            </h3>
+            <p>
+              Looking for a sustainable way to give gifts that’s thoughtful,
+              beautiful, and eco-conscious? You’re in the right place.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/BLOG 2 HERO .png" alt="Blog Post 2" />
+        <div class="blog-card-content">
+          <h3>How Businesses Can Go Green Without Compromising on Style</h3>
+          <p>
+            Going green used to mean giving up something of convenience, beauty,
+            or professionalism. But not anymore.
+          </p>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/BLOG 3 HERO .png" alt="Blog Post 3" />
+        <div class="blog-card-content">
+          <h3>Why More Hotels Are Choosing Sustainable Packaging</h3>
+          <p>
+            In today’s eco-conscious travel industry, hotels are embracing
+            sustainable packaging to meet the growing demand for responsible
+            hospitality.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

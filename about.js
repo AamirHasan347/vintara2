@@ -73,3 +73,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// JavaScript to auto-scroll the membership section card-by-card
+const track = document.querySelector(".membership-track");
+const cards = document.querySelectorAll(".membership-card");
+let index = 0;
+
+setInterval(() => {
+  index = (index + 1) % cards.length;
+  const scrollTo =
+    cards[index].offsetLeft -
+    (track.offsetWidth - cards[index].offsetWidth) / 2;
+  track.scrollTo({ left: scrollTo, behavior: "smooth" });
+}, 4000); // Every 4 seconds
