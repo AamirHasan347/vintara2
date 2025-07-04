@@ -19,6 +19,12 @@
       referrerpolicy="no-referrer"
     />
     <!-- <link rel="stylesheet" href="blog.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <style>
@@ -32,7 +38,12 @@
         --font-title: "League Spartan", "Playfair Display", Arial, sans-serif;
         --font-main: "Public Sans", "Inter", sans-serif;
       }
-
+      /* typography */
+      .kanit-semibold-italic {
+        font-family: "Kanit", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+      }
       /* GLOBAL RESET */
       *,
       *:before,
@@ -352,7 +363,7 @@
 
       .blog-section {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: space-between;
         gap: 2rem;
         max-width: 1200px;
@@ -362,15 +373,22 @@
 
       .blog-image {
         flex: 1 1 45%;
+        display: flex;
+        align-items: center;
       }
 
       .blog-image img {
         width: 100%;
+        max-height: 380px;
+        object-fit: cover;
         border-radius: 12px;
       }
 
       .blog-text {
         flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .blog-text h3 {
@@ -386,6 +404,35 @@
         line-height: 1.7;
       }
 
+      .blog-footer {
+        background-color: var(--background);
+        text-align: center;
+        padding: 4rem 2rem 6rem;
+      }
+
+      .author-profile {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .author-profile img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+      }
+
+      .author-profile p {
+        font-family: var(--font-main);
+        font-size: 1rem;
+        color: var(--text);
+        opacity: 0.9;
+      }
+
       @media (max-width: 768px) {
         .blog-hero-text h2 {
           font-size: 2rem;
@@ -398,6 +445,15 @@
         .blog-image,
         .blog-text {
           flex: 1 1 100%;
+        }
+
+        .blog-image img {
+          max-height: 260px;
+        }
+
+        .author-profile img {
+          width: 100px;
+          height: 100px;
         }
       }
     </style>
@@ -454,7 +510,9 @@
     <section class="blog-hero">
       <div class="blog-hero-overlay">
         <div class="blog-hero-text">
-          <h2>Sustainable Gifting with Jute</h2>
+          <h2>
+            Wrap It with Care: The Eco-Gifting Trend Making All the Difference
+          </h2>
           <p>By Vintara International</p>
         </div>
       </div>
@@ -578,6 +636,14 @@
         <div class="blog-image">
           <img src="../images/BLOG 1.4 .png" alt="The Vintara Way" />
         </div>
+      </div>
+    </section>
+
+    <!-- Blog Footer -->
+    <section class="blog-footer">
+      <div class="author-profile">
+        <img src="../images/MARKETING HEAD.jpg" alt="Author: Marketing Head" />
+        <p>Marketing Head</p>
       </div>
     </section>
 
