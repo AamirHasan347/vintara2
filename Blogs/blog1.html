@@ -458,6 +458,75 @@
           height: 100px;
         }
       }
+      @media (max-width: 768px) {
+        .blog-section,
+        .blog-section.reverse {
+          display: block;
+        }
+
+        .blog-section .blog-text,
+        .blog-section .blog-image {
+          width: 100%;
+        }
+
+        .blog-section .blog-text h3 {
+          margin-bottom: 1rem;
+        }
+
+        .blog-section .blog-image {
+          margin-bottom: 1rem;
+        }
+
+        .blog-section .blog-image img {
+          width: 100%;
+          height: auto;
+          max-height: 260px;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+
+        .blog-section .blog-text p {
+          line-height: 1.7;
+          font-size: 1rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .blog-section,
+        .blog-section.reverse {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+        }
+
+        .blog-section .blog-text {
+          order: 0;
+          width: 100%;
+        }
+
+        .blog-section .blog-image {
+          order: 1;
+          width: 100%;
+          margin: 1rem 0;
+        }
+
+        .blog-section .blog-image img {
+          width: 100%;
+          height: auto;
+          max-height: 260px;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+
+        .blog-section .blog-text h3 {
+          margin-bottom: 1rem;
+        }
+
+        .blog-section .blog-text p {
+          font-size: 1rem;
+          line-height: 1.7;
+        }
+      }
     </style>
 
     <!-- Sticky Premium Navbar -->
@@ -515,7 +584,7 @@
           <h2>
             Wrap It with Care: The Eco-Gifting Trend Making All the Difference
           </h2>
-          <p>By Vintara International</p>
+          <p>By Marketing Head - Vintara International</p>
         </div>
       </div>
     </section>
@@ -645,7 +714,7 @@
     <section class="blog-footer">
       <div class="author-profile">
         <img src="../images/MARKETING HEAD.jpg" alt="Author: Marketing Head" />
-        <p>Marketing Head</p>
+        <p>Marketing Head - Vintara International</p>
       </div>
     </section>
 
