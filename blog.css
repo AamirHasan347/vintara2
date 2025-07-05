@@ -499,3 +499,505 @@ body {
   color: var(--text);
   opacity: 0.9;
 }
+
+/* =================================Footer Section======================================= */
+/* Footer Styling */
+.site-footer {
+  background: url("images/END BACKGROUND.jpg") center center / cover no-repeat;
+  padding: 4rem 2rem;
+  color: #f6ffec;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f6ffec;
+  margin-bottom: 0.6rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.footer-column p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f6ffec;
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  color: #f6ffec;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+/* Bottom line */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #f6ffec;
+  font-style: italic;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
+
+/* === RESPONSIVE FIXES FOR ALL SECTIONS === */
+
+/* 1. Remove x-axis scroll on small screens */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* 2. Add bottom margin to each section to prevent overlap */
+section {
+  margin-bottom: 2rem;
+}
+
+/* 3. Replace custom cursor on touch devices */
+@media (hover: none), (pointer: coarse) {
+  .circle {
+    display: none !important;
+  }
+
+  body:active::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    background: rgba(12, 72, 51, 0.3);
+    border-radius: 50%;
+    animation: tap-circle 0.5s ease-out forwards;
+    pointer-events: none;
+  }
+
+  @keyframes tap-circle {
+    from {
+      transform: scale(0.2);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+}
+
+/* === Responsive: About Section === */
+@media (max-width: 768px) {
+  .jute-section-with-bg {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .jute-frame-wrapper,
+  .about-text-col {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+  }
+  .about-title {
+    font-size: 1.6rem;
+  }
+  .about-desc {
+    font-size: 1rem;
+  }
+}
+
+/* === Responsive: Why Us Section (Already partially done) === */
+@media (max-width: 768px) {
+  .v-choose-exact {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .v-choose-heading {
+    font-size: 1.8rem;
+  }
+  .v-choose-subtext {
+    font-size: 0.95rem;
+  }
+  .v-feature {
+    width: 160px;
+  }
+  .v-feature img {
+    width: 60px;
+  }
+  .v-feature h4 {
+    font-size: 1rem;
+  }
+  .v-feature p {
+    font-size: 0.85rem;
+  }
+}
+
+/* === Responsive: Products === */
+@media (max-width: 768px) {
+  .product-card {
+    padding: 1rem;
+  }
+  .products-title {
+    font-size: 1.8rem;
+  }
+  .product-card h3 {
+    font-size: 0.9rem;
+  }
+  .product-categories {
+    gap: 1rem;
+  }
+}
+
+/* === Responsive: Fabric Section === */
+@media (max-width: 768px) {
+  .fabric-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .fabric-item img {
+    width: 180px;
+    height: 180px;
+  }
+  .fabric-item p {
+    font-size: 1.1rem;
+  }
+}
+
+/* === Responsive: Stats Section === */
+@media (max-width: 768px) {
+  .vintara-stats-title {
+    font-size: 1.6rem;
+  }
+  .vintara-stats-description {
+    font-size: 1rem;
+  }
+}
+
+/* === Responsive: FAQ === */
+@media (max-width: 768px) {
+  .v-faq-header h2 {
+    font-size: 1.8rem;
+  }
+  .v-faq-question {
+    font-size: 1rem;
+  }
+}
+
+/* === Responsive: Contact === */
+@media (max-width: 768px) {
+  .contact-form-col,
+  .contact-info-col {
+    width: 100%;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* === Responsive: Footer === */
+@media (max-width: 768px) {
+  .footer-column {
+    text-align: center;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* === Layout Improvements for Small Screens === */
+
+/* 1. Fabric section - horizontal scroll for mobile */
+@media (max-width: 768px) {
+  .fabric-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .fabric-item {
+    min-width: 200px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  .fabric-item img {
+    width: 160px;
+    height: 160px;
+  }
+  .fabric-item p {
+    font-size: 1rem;
+  }
+}
+
+/* 2. Vintara Stats Section - better compact layout */
+@media (max-width: 768px) {
+  .vintara-stats-section {
+    padding: 4rem 1rem;
+  }
+  .vintara-stats-overlay {
+    padding: 2rem 1.2rem;
+  }
+  .vintara-stats-title {
+    font-size: 1.5rem;
+  }
+  .vintara-stats-description {
+    font-size: 0.95rem;
+  }
+  .vintara-stat-number {
+    font-size: 1.5rem;
+  }
+  .vintara-stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* 3. FAQ section - padding and scale fix */
+@media (max-width: 768px) {
+  .v-faq-container {
+    padding: 0 1rem;
+  }
+  .v-faq-header h2 {
+    font-size: 1.6rem;
+  }
+  .v-faq-header p {
+    font-size: 0.95rem;
+  }
+  .v-faq-item {
+    margin: 1rem 0;
+  }
+  .v-faq-question {
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+  }
+  .v-faq-answer-content {
+    padding: 0 1.2rem 1.2rem;
+  }
+  .v-faq-section {
+    padding: 3.5rem 0.5rem;
+  }
+}
+
+.site-footer {
+  background: url("./images/END BACKGROUND.jpg") center center / cover no-repeat;
+  padding: 3rem 1.5rem;
+  color: #f6ffec;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.3rem;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f6ffec;
+  margin-bottom: 0.6rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.footer-column p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f6ffec;
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  color: #f6ffec;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+/* Bottom line */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  color: #f6ffec;
+  font-family: "Public Sans";
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .premium-hero,
+  .products-section,
+  .fabric-section,
+  .vintara-stats-section,
+  .v-faq-section,
+  .contact-us,
+  .site-footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box;
+  }
+  .footer-content {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-hero,
+  .products-section,
+  .fabric-section,
+  .vintara-stats-section,
+  .v-faq-section,
+  .contact-us,
+  .site-footer {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .footer-content {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+}
+
+/* === FOOTER === */
+.v-footer {
+  background-image: url("images/footerBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #f6ffec;
+  font-family: "Public Sans", sans-serif;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.v-footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+}
+
+.v-footer-column {
+  flex: 1 1 300px;
+  color: #f6ffec;
+}
+
+.v-footer-column h4 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.v-footer-column p,
+.v-footer-column a {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f6ffec;
+  text-decoration: none;
+}
+
+.v-footer-column a:hover {
+  text-decoration: underline;
+}
+
+.v-footer-logo img {
+  max-height: 200px;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.v-footer-logo img:hover {
+  transform: scale(1.05);
+}
+
+.v-footer-social {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.v-footer-social a {
+  color: #f6ffec;
+  margin: 0 12px;
+  font-size: 1.3rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.v-footer-social a:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: #e4f3db;
+}
+
+.v-footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Playfair Display", cursive;
+  font-size: 1.05rem;
+  color: #f6ffec;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .v-footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .v-footer-column {
+    flex: 1 1 100%;
+  }
+
+  .v-footer-logo img {
+    max-height: 90px;
+  }
+}

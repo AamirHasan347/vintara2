@@ -1,38 +1,40 @@
+// Scroll-based navbar + logo swap (only for non-index pages)
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("StickyNavbar");
   // const logo = document.getElementById("navbarLogo");
   const links = document.querySelectorAll(".v-navbar-link");
   const scrolled = window.scrollY > 80;
 
-  if (scrolled) {
-    navbar.classList.add("v-sticky-navbar-scrolled");
-    navbar.classList.remove("v-sticky-navbar-transparent");
-    // logo.src = "images/vintaraLogoGreen.svg";
-    links.forEach((link) => (link.style.color = "#0c4833"));
+  // Check if we're on the index page
+  const isIndexPage =
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname.endsWith("/") ||
+    window.location.pathname === "";
+
+  if (isIndexPage) {
+    // For index page: always use green colors, but keep background transition
+    if (scrolled) {
+      navbar.classList.add("v-sticky-navbar-scrolled");
+      navbar.classList.remove("v-sticky-navbar-transparent");
+      links.forEach((link) => (link.style.color = "#0c4833"));
+    } else {
+      navbar.classList.remove("v-sticky-navbar-scrolled");
+      navbar.classList.add("v-sticky-navbar-transparent");
+      links.forEach((link) => (link.style.color = "#0c4833")); // Always green
+    }
   } else {
-    navbar.classList.remove("v-sticky-navbar-scrolled");
-    navbar.classList.add("v-sticky-navbar-transparent");
-    // logo.src = "images/vintaraLogoWhite";
-    links.forEach((link) => (link.style.color = "#ffffff"));
+    // For other pages: original white-to-green behavior
+    if (scrolled) {
+      navbar.classList.add("v-sticky-navbar-scrolled");
+      navbar.classList.remove("v-sticky-navbar-transparent");
+      links.forEach((link) => (link.style.color = "#0c4833"));
+    } else {
+      navbar.classList.remove("v-sticky-navbar-scrolled");
+      navbar.classList.add("v-sticky-navbar-transparent");
+      links.forEach((link) => (link.style.color = "#ffffff"));
+    }
   }
 });
-// To switch the Hero 1 section with Hero 2 section for screen under 1660 px
-
-function toggleHeroSection() {
-  const standardHero = document.querySelector(".premium-hero");
-  const altHero = document.getElementById("v-hero-alt");
-
-  if (window.innerWidth <= 1660) {
-    standardHero.style.display = "none";
-    altHero.style.display = "block";
-  } else {
-    standardHero.style.display = "flex";
-    altHero.style.display = "none";
-  }
-}
-
-window.addEventListener("resize", toggleHeroSection);
-window.addEventListener("DOMContentLoaded", toggleHeroSection);
 
 // Mobile menu toggle functionality
 document.addEventListener("DOMContentLoaded", function () {

@@ -35,15 +35,22 @@
     <div class="circle"></div>
 
     <!-- Sticky Premium Navbar -->
-    <nav class="v-sticky-navbar" id="StickyNavbar">
+    <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
       <div class="v-navbar-inner">
         <div class="v-navbar-left">
+          <!-- Two logos, toggle visibility with CSS -->
+          <img
+            src="images/vintaraLogoWhite.svg"
+            alt="Vintara Logo White"
+            class="v-navbar-logo logo-white"
+          />
           <img
             src="images/vintaraLogoGreen.svg"
-            alt="Vintara Logo"
-            class="v-navbar-logo"
+            alt="Vintara Logo Green"
+            class="v-navbar-logo logo-green"
           />
-          <ul class="v-navbar-menu">
+
+          <ul class="v-navbar-menu" id="navbarLinks">
             <li><a href="index.html" class="v-navbar-link">Home</a></li>
             <li><a href="#products" class="v-navbar-link">Products</a></li>
             <li><a href="about.html" class="v-navbar-link">About Us</a></li>
@@ -63,11 +70,13 @@
       </div>
       <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
         <ul>
-          <li><a href="#" class="v-navbar-link">Home</a></li>
+          <li><a href="index.html" class="v-navbar-link">Home</a></li>
           <li><a href="#products" class="v-navbar-link">Products</a></li>
           <li><a href="about.html" class="v-navbar-link">About Us</a></li>
           <li><a href="blog.html" class="v-navbar-link">Blog</a></li>
-          <li><a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a></li>
+          <li>
+            <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -907,6 +916,6 @@
         </p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
