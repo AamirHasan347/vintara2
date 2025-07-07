@@ -1475,9 +1475,9 @@ button:not(.testimonial-dot):focus {
 }
 
 .v-navbar-logo {
-  height: 240px;
-  margin: 32px 32px 0 0;
-  padding: 32px;
+  height: 200px;
+  margin: 0;
+  padding: 8px;
   margin-right: 2rem;
   transition: 0.3s ease;
 }
