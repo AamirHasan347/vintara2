@@ -297,8 +297,8 @@
     }
 
     .hero {
-      background: url("images/OUR PRODUCTS /PROD MAIN HERO.png") center/cover
-        no-repeat;
+      background: url("../images/OUR PRODUCTS /BRAND PROMOTIONAL BAG HERO.png")
+        center/cover no-repeat;
       height: 45vh;
       display: flex;
       align-items: center;
@@ -367,7 +367,7 @@
 
     /* footer */
     .v-footer {
-      background-image: url("images/footerBackground.jpg");
+      background-image: url("../images/footerBackground.jpg");
       background-size: cover;
       background-position: center;
       color: #f6ffec;
@@ -471,6 +471,58 @@
     .v-sticky-navbar-transparent .v-navbar-link::after {
       background: #0c4833 !important;
     }
+    .product-page-layout {
+      display: flex;
+      align-items: flex-start;
+      padding: 4rem;
+      gap: 3rem;
+    }
+
+    .product-sidebar {
+      width: 250px;
+      background-color: white;
+      border: 2px solid var(--dark-green);
+      border-radius: 12px;
+      padding: 2rem;
+      font-family: var(--font-title);
+      font-weight: 700;
+      color: var(--dark-green);
+    }
+
+    .product-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .product-sidebar li {
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .product-sidebar li:hover {
+      color: #176b4c;
+    }
+
+    .product-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      padding: 0;
+      background-color: var(--pista);
+    }
+
+    @media (max-width: 1024px) {
+      .product-page-layout {
+        flex-direction: column;
+      }
+
+      .product-sidebar {
+        width: 100%;
+      }
+    }
   </style>
   <body>
     <!-- Sticky Premium Navbar -->
@@ -479,12 +531,12 @@
         <div class="v-navbar-left">
           <!-- Two logos, toggle visibility with CSS -->
           <img
-            src="images/vintaraLogoGreen.svg"
+            src="../images/vintaraLogoGreen.svg"
             alt="Vintara Logo green"
             class="v-navbar-logo logo-white"
           />
           <img
-            src="images/vintaraLogoGreen.svg"
+            src="../images/vintaraLogoGreen.svg"
             alt="Vintara Logo Green"
             class="v-navbar-logo logo-green"
           />
@@ -527,156 +579,73 @@
     </nav>
 
     <!-- Products Grid -->
+    <!-- Hero Section -->
     <section class="hero">
-      <h1>OUR PRODUCTS</h1>
+      <h1>BRAND PROMOTION BAGS</h1>
     </section>
 
-    <section class="product-grid">
-      <a href="products-subcategory/brandpromotion.html" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /BPB FRONT IMAGE.png"
-            alt="BRAND PROMOTION BAGS"
-          />
-          <h2>BRAND PROMOTION BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /CI FRONT IMAGE.png"
-            alt="CORPORATE ITEMS"
-          />
-          <h2>CORPORATE ITEMS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /JSB FRONT IMAGE.png"
-            alt="JUTE SHOPPING BAGS"
-          />
-          <h2>JUTE SHOPPING BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /GHB FRONT IMAGE.png"
-            alt="GIFT HAMPER BASKET"
-          />
-          <h2>GIFT HAMPER BASKET</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /JP FRONT IMAGE.png"
-            alt="JUTE POUCHES"
-          />
-          <h2>JUTE POUCHES</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /TB FRONT IMAGE.png"
-            alt="TOILETRY BAGS"
-          />
-          <h2>TOILETRY BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /JSB FRONT IMAGE.png"
-            alt="JUTE GROW BAGS"
-          />
-          <h2>JUTE GROW BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /FAE FRONT IMAGE.png"
-            alt="FESTIVAL AND EVENT BAGS"
-          />
-          <h2>FESTIVAL AND EVENT BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /FB FRONT IMAGE.png"
-            alt="FASHIONABLE BAGS"
-          />
-          <h2>FASHIONABLE BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /BB FRONT IMAGE.png"
-            alt="BOTTLE BAGS"
-          />
-          <h2>BOTTLE BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /JJB FRONT IMAGE.png"
-            alt="JUTE JAR BAGS"
-          />
-          <h2>JUTE JAR BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /JLB FRONT IMAGE.png"
-            alt="LUNCH BAGS"
-          />
-          <h2>JUTE LUNCH BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /SB FRONT IMAGE.png"
-            alt="STORAGE BASKET"
-          />
-          <h2>STORAGE BASKET</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /WHB FRONT IMAGE.png"
-            alt="WALL HANGING BAGS"
-          />
-          <h2>WALL HANGING BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /LB FRONT IMAGE.png"
-            alt="LAUNDRY BAGS"
-          />
-          <h2>LAUNDRY BAGS</h2>
-        </div>
-      </a>
-      <a href="#" class="product-link">
-        <div class="product-card">
-          <img
-            src="images/OUR PRODUCTS /YMB FRONT IMAGE.png"
-            alt="YOGA MAT BAGS"
-          />
-          <h2>YOGA MAT BAGS</h2>
-        </div>
-      </a>
-    </section>
+    <!-- Sidebar + Product Grid Layout -->
+    <div class="product-page-layout">
+      <aside class="product-sidebar">
+        <ul>
+          <li>BRAND PROMOTION BAGS</li>
+          <li>CORPORATE ITEMS</li>
+          <li>SHOPPING BAGS</li>
+          <li>GIFT HAMPER BASKET</li>
+          <li>JUTE POUCHES</li>
+          <li>TOILETRY BAGS</li>
+          <li>GROW BAGS</li>
+          <li>FESTIVAL AND EVENT BAGS</li>
+          <li>FASHIONABLE BAGS</li>
+          <li>BOTTLE BAGS</li>
+          <li>JAR BAGS</li>
+          <li>LUNCH BAGS</li>
+          <li>STORAGE BASKET</li>
+          <li>WALL HANGING BAGS</li>
+          <li>LAUNDRY BAGS</li>
+          <li>YOGA MAT BAGS</li>
+        </ul>
+      </aside>
+
+      <section class="product-grid">
+        <a href="#" class="product-link">
+          <div class="product-card">
+            <img
+              src="../images/OUR PRODUCTS /NATURAL JUTE BAGS FRONT.png"
+              alt="NATURAL JUTE BAGS"
+            />
+            <h2>NATURAL JUTE BAGS</h2>
+          </div>
+        </a>
+        <a href="#" class="product-link">
+          <div class="product-card">
+            <img
+              src="../images/OUR PRODUCTS /WHITE JUTE BAGS FRONT.png"
+              alt="WHITE JUTE BAGS"
+            />
+            <h2>WHITE JUTE BAGS</h2>
+          </div>
+        </a>
+        <a href="#" class="product-link">
+          <div class="product-card">
+            <img
+              src="../images/OUR PRODUCTS /COLOURED JUTE BAGS FRONT.png"
+              alt="COLOURED JUTE BAGS"
+            />
+            <h2>COLOURED JUTE BAGS</h2>
+          </div>
+        </a>
+        <a href="#" class="product-link">
+          <div class="product-card">
+            <img
+              src="../images/OUR PRODUCTS /PROMOTIONAL TOTE BAGS FRONT.png"
+              alt="PROMOTIONAL TORE BAGS"
+            />
+            <h2>PROMOTIONAL TOTE BAGS</h2>
+          </div>
+        </a>
+      </section>
+    </div>
 
     <!-- Footer -->
     <link
@@ -694,7 +663,7 @@
 
         <!-- Center Logo -->
         <div class="v-footer-column v-footer-logo">
-          <img src="images/vintaraLogoWhiteFooter.svg" alt="Vintara Logo" />
+          <img src="../images/vintaraLogoWhiteFooter.svg" alt="Vintara Logo" />
         </div>
 
         <!-- Right Column -->
@@ -737,5 +706,5 @@
       </div>
     </footer>
   </body>
-  <script src="about.js"></script>
+  <script src="../about.js"></script>
 </html>

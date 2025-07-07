@@ -1517,7 +1517,7 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   font-size: 1.1rem;
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #0c4833; /* Deep green */
   transition: color 0.3s ease;
   position: relative;
 }
@@ -1526,7 +1526,7 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   position: absolute;
   width: 0%;
   height: 2px;
-  background: white;
+  background: #0c4833; /* Deep green */
   left: 0;
   bottom: -4px;
   transition: width 0.3s ease;
@@ -1535,11 +1535,12 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   width: 100%;
 }
 
+/* Remove color change on scroll */
 .v-sticky-navbar-scrolled .v-navbar-link {
-  color: var(--primary);
+  color: #0c4833;
 }
 .v-sticky-navbar-scrolled .v-navbar-link::after {
-  background: var(--primary);
+  background: #0c4833;
 }
 
 /* ENQUIRE button */
