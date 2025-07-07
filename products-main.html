@@ -129,12 +129,13 @@
       margin: 0;
     }
 
+    /* Navbar links always green, never white */
     .v-navbar-link {
       font-family: var(--font-title);
       font-size: 1.1rem;
       font-weight: 700;
       text-decoration: none;
-      color: white;
+      color: #0c4833; /* Deep green */
       transition: color 0.3s ease;
       position: relative;
     }
@@ -143,7 +144,7 @@
       position: absolute;
       width: 0%;
       height: 2px;
-      background: white;
+      background: #0c4833; /* Deep green */
       left: 0;
       bottom: -4px;
       transition: width 0.3s ease;
@@ -151,18 +152,17 @@
     .v-navbar-link:hover::after {
       width: 100%;
     }
-
     .v-sticky-navbar-scrolled .v-navbar-link {
-      color: var(--primary);
+      color: #0c4833;
     }
     .v-sticky-navbar-scrolled .v-navbar-link::after {
-      background: var(--primary);
+      background: #0c4833;
     }
 
     /* ENQUIRE button */
     .v-btn.v-navbar-enquire {
-      border: 2px solid white;
-      color: white;
+      border: 2px solid #0c4833; /* Always deep green */
+      color: #0c4833;
       background: transparent;
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
@@ -172,12 +172,12 @@
       text-decoration: none; /* ✅ Fix underline */
     }
     .v-btn.v-navbar-enquire:hover {
-      background: white;
-      color: var(--primary);
+      background: #0c4833;
+      color: #fff;
     }
     .v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
-      border: 2px solid var(--primary);
-      color: var(--primary);
+      border: 2px solid #0c4833;
+      color: #0c4833;
       background: white;
     }
 
@@ -185,53 +185,6 @@
       .v-navbar-right .v-btn.v-navbar-enquire {
         display: none !important;
       }
-    }
-
-    /* === ABOUT HERO SECTION === */
-    /* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(12, 72, 51, 0.6); /* dark green overlay */
-    /* z-index: 1;
-} */
-
-    .about-hero {
-      position: relative;
-      width: 100%;
-      min-height: 75vh;
-      background-image: url("images/ABOUT 1 BACKGROUND NEW.png");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: left;
-      padding: 6rem 2rem 4rem 2rem;
-    }
-
-    .about-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-      color: white;
-      z-index: 100;
-    }
-
-    .about-content h1 {
-      font-family: var(--font-title);
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-    }
-
-    .about-content p {
-      font-family: var(--font-main);
-      font-size: 1.3rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
     }
 
     /* === HAMBURGER MENU === */
@@ -355,11 +308,9 @@
 
     .hero h1 {
       font-family: "League Spartan", sans-serif;
-      font-size: 4rem;
-      color: white;
-      background-color: var(--dark-green);
-      padding: 0.5rem 2rem;
-      border-radius: 8px;
+      font-size: 5rem;
+      color: var(--dark-green);
+      text-shadow: 8px 8px 0 #b0b0b0, 0 2px 12px rgba(0, 0, 0, 0.15);
     }
 
     .product-grid {
@@ -387,8 +338,9 @@
 
     .product-card img {
       width: 100%;
-      height: 240px;
+      height: 320px;
       object-fit: cover;
+      object-position: bottom;
     }
 
     .product-card h2 {
@@ -512,6 +464,13 @@
         max-height: 90px;
       }
     }
+
+    .v-sticky-navbar-transparent .v-navbar-link {
+      color: #0c4833 !important;
+    }
+    .v-sticky-navbar-transparent .v-navbar-link::after {
+      background: #0c4833 !important;
+    }
   </style>
   <body>
     <!-- Sticky Premium Navbar -->
@@ -520,8 +479,8 @@
         <div class="v-navbar-left">
           <!-- Two logos, toggle visibility with CSS -->
           <img
-            src="images/vintaraLogoWhite.svg"
-            alt="Vintara Logo White"
+            src="images/vintaraLogoGreen.svg"
+            alt="Vintara Logo green"
             class="v-navbar-logo logo-white"
           />
           <img
@@ -569,7 +528,7 @@
 
     <!-- Products Grid -->
     <section class="hero">
-      <h1>PRODUCTS</h1>
+      <h1>OUR PRODUCTS</h1>
     </section>
 
     <section class="product-grid">
@@ -674,8 +633,11 @@
       </a>
       <a href="#" class="product-link">
         <div class="product-card">
-          <img src="images/OUR PRODUCTS /LB FRONT IMAGE.png" alt="LUNCH BAGS" />
-          <h2>LUNCH BAGS</h2>
+          <img
+            src="images/OUR PRODUCTS /JLB FRONT IMAGE.png"
+            alt="LUNCH BAGS"
+          />
+          <h2>JUTE LUNCH BAGS</h2>
         </div>
       </a>
       <a href="#" class="product-link">
