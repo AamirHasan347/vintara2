@@ -28,6 +28,10 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Playfair+Display:ital@0;1&family=Public+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <style>
     /* ROOT VARIABLES */
@@ -474,19 +478,27 @@
     .product-page-layout {
       display: flex;
       align-items: flex-start;
-      padding: 4rem;
-      gap: 3rem;
+      margin: 0;
+    }
+
+    /* Hero height is 45vh */
+    .product-page-layout {
+      display: flex;
+      align-items: flex-start;
     }
 
     .product-sidebar {
-      width: 250px;
+      width: 320px;
+      min-height: calc(100vh - 45vh); /* full height minus hero */
       background-color: white;
-      border: 2px solid var(--dark-green);
-      border-radius: 12px;
-      padding: 2rem;
+      color: var(--dark-green);
+      padding: 2rem 1.5rem;
       font-family: var(--font-title);
       font-weight: 700;
-      color: var(--dark-green);
+      font-size: 1.05rem;
+      border-right: 2px solid var(--dark-green);
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, visibility 0.3s ease;
     }
 
     .product-sidebar ul {
@@ -494,15 +506,195 @@
       padding: 0;
       margin: 0;
     }
+    @media (max-width: 1024px) {
+      .product-sidebar {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .product-sidebar.active {
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
 
     .product-sidebar li {
-      margin-bottom: 1rem;
+      padding: 1rem 1.2rem;
+      border-left: 4px solid transparent;
       cursor: pointer;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      color: var(--dark-green);
+      border-radius: 6px;
     }
 
     .product-sidebar li:hover {
-      color: #176b4c;
+      background-color: var(--dark-green);
+      color: #fff;
+      border-left: 4px solid #fff;
+    }
+
+    .product-sidebar li.active {
+      background-color: var(--dark-green);
+      color: #fff;
+      border-left: 4px solid #fff;
+    }
+
+    /* Responsive adjustment */
+    @media (max-width: 1024px) {
+      .product-sidebar {
+        display: none;
+        position: fixed;
+        top: 100px; /* below navbar */
+        left: 0;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 100px); /* adjust for navbar height */
+        background-color: var(--pista);
+        z-index: 1000;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+      }
+
+      .product-sidebar.active {
+        display: block;
+        transform: translateX(0%);
+      }
+      /* Mobile Sidebar (hidden by default) */
+      .product-sidebar {
+        width: 320px;
+        min-height: calc(100vh - 45vh);
+        background-color: var(--pista);
+        color: var(--dark-green);
+        padding: 2rem 1.5rem;
+        font-family: var(--font-title);
+        font-weight: 700;
+        font-size: 1.05rem;
+        border-right: 2px solid var(--dark-green);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, visibility 0.3s ease;
+      }
+
+      /* Always hide sidebar on mobile by default */
+      @media (max-width: 1024px) {
+        .product-sidebar {
+          display: none;
+          position: fixed;
+          top: 100px;
+          left: 0;
+          width: 80%;
+          max-width: 300px;
+          height: calc(100vh - 100px);
+          background-color: var(--pista);
+          z-index: 1000;
+          overflow-y: auto;
+          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+          transform: translateX(-100%);
+        }
+
+        .product-sidebar.active {
+          display: block;
+          transform: translateX(0%);
+        }
+      }
+
+      /* Hide sidebar on large screens when not needed */
+      @media (min-width: 1025px) {
+        .product-sidebar.active {
+          display: block;
+          position: relative;
+          transform: none;
+        }
+      }
+
+      /* ------------------ Drawer Styling Fixes ------------------ */
+
+      /* Hide drawer globally by default */
+      .mobile-filter-drawer {
+        display: none;
+      }
+
+      /* Show only on small screens */
+      @media (max-width: 1024px) {
+        .mobile-filter-drawer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: var(--dark-green);
+          z-index: 1001;
+          box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+          display: block;
+        }
+
+        .drawer-toggle {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.1rem;
+          font-family: var(--font-title);
+          background: var(--dark-green);
+          color: #fff;
+          border: none;
+          cursor: pointer;
+        }
+
+        .drawer-content {
+          max-height: 0;
+          overflow: hidden;
+          background: var(--pista);
+          transition: max-height 0.3s ease;
+        }
+
+        .drawer-content ul {
+          list-style: none;
+          margin: 0;
+          padding: 1rem;
+        }
+
+        .drawer-content li {
+          padding: 0.8rem 1rem;
+          border-bottom: 1px solid #ccc;
+          font-family: var(--font-main);
+          font-size: 1rem;
+          color: var(--dark-green);
+          cursor: pointer;
+        }
+
+        .drawer-content li:hover {
+          background: var(--dark-green);
+          color: #fff;
+        }
+      }
+
+      /* Hide on larger screens */
+      @media (min-width: 1025px) {
+        .mobile-filter-drawer {
+          display: none !important;
+        }
+      }
+
+      .product-sidebar {
+        position: fixed;
+        bottom: 56px; /* Height of drawer */
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        overflow-y: auto;
+        background-color: var(--pista);
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        visibility: hidden;
+        z-index: 1100;
+      }
+
+      .product-sidebar.active {
+        transform: translateY(0%);
+        visibility: visible;
+      }
     }
 
     .product-grid {
@@ -512,6 +704,7 @@
       gap: 2.5rem;
       padding: 0;
       background-color: var(--pista);
+      margin: 2.5rem;
     }
 
     @media (max-width: 1024px) {
@@ -523,12 +716,24 @@
         width: 100%;
       }
     }
-    /* .product-card img {
-          image-rendering: auto;
-        } */
-    /* .product-card img {
-          image-rendering: crisp-edges; 
-    } */
+    @media (min-width: 1025px) {
+      .mobile-filter-drawer {
+        display: none !important;
+      }
+
+      .product-sidebar {
+        position: relative !important;
+        transform: none !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        display: block !important;
+      }
+
+      .drawer-toggle,
+      .drawer-content {
+        display: none !important;
+      }
+    }
   </style>
   <body>
     <!-- Sticky Premium Navbar -->
@@ -568,19 +773,17 @@
         </div>
       </div>
       <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
-        <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
-          <ul>
-            <li><a href="index.html" class="v-navbar-link">Home</a></li>
-            <li>
-              <a href="products-main.html" class="v-navbar-link">Products</a>
-            </li>
-            <li><a href="about.html" class="v-navbar-link">About Us</a></li>
-            <li><a href="blog.html" class="v-navbar-link">Blog</a></li>
-            <li>
-              <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="index.html" class="v-navbar-link">Home</a></li>
+          <li>
+            <a href="products-main.html" class="v-navbar-link">Products</a>
+          </li>
+          <li><a href="about.html" class="v-navbar-link">About Us</a></li>
+          <li><a href="blog.html" class="v-navbar-link">Blog</a></li>
+          <li>
+            <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -612,6 +815,33 @@
           <li>YOGA MAT BAGS</li>
         </ul>
       </aside>
+
+      <!-- Mobile Filter Drawer (Bottom of screen) -->
+      <div class="mobile-filter-drawer" id="mobileFilterDrawer">
+        <button class="drawer-toggle" id="drawerToggle">
+          BRAND PROMOTION BAGS
+        </button>
+        <div class="drawer-content" id="drawerContent">
+          <ul id="mobileFilterList">
+            <li>BRAND PROMOTION BAGS</li>
+            <li>CORPORATE ITEMS</li>
+            <li>SHOPPING BAGS</li>
+            <li>GIFT HAMPER BASKET</li>
+            <li>JUTE POUCHES</li>
+            <li>TOILETRY BAGS</li>
+            <li>GROW BAGS</li>
+            <li>FESTIVAL AND EVENT BAGS</li>
+            <li>FASHIONABLE BAGS</li>
+            <li>BOTTLE BAGS</li>
+            <li>JAR BAGS</li>
+            <li>LUNCH BAGS</li>
+            <li>STORAGE BASKET</li>
+            <li>WALL HANGING BAGS</li>
+            <li>LAUNDRY BAGS</li>
+            <li>YOGA MAT BAGS</li>
+          </ul>
+        </div>
+      </div>
 
       <section class="product-grid">
         <a href="#" class="product-link">
@@ -651,11 +881,6 @@
     </div>
 
     <!-- Footer -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Playfair+Display:ital@0;1&family=Public+Sans&display=swap"
-      rel="stylesheet"
-    />
-
     <footer class="v-footer">
       <div class="v-footer-container">
         <!-- Left Column -->
@@ -708,6 +933,35 @@
         </p>
       </div>
     </footer>
+    <script>
+      const drawerToggle = document.getElementById("drawerToggle");
+      const drawerContent = document.getElementById("drawerContent");
+      const mobileFilterList = document.getElementById("mobileFilterList");
+      const heroText = document.querySelector(".hero h1")?.textContent.trim();
+
+      // Set default to Hero title if nothing selected
+      if (drawerToggle && heroText) {
+        drawerToggle.textContent = heroText;
+      }
+
+      drawerToggle.addEventListener("click", () => {
+        const isOpen = drawerContent.style.maxHeight;
+        drawerContent.style.maxHeight = isOpen
+          ? null
+          : drawerContent.scrollHeight + "px";
+      });
+
+      // Update dropdown toggle text on click
+      mobileFilterList.addEventListener("click", (e) => {
+        if (e.target.tagName === "LI") {
+          const selected = e.target.textContent;
+          drawerToggle.textContent = selected;
+          drawerContent.style.maxHeight = null;
+        }
+      });
+    </script>
+
+    <script src="../about.js"></script>
+    <!-- Mobile Drawer Button (Fixed at bottom) -->
   </body>
-  <script src="../about.js"></script>
 </html>
