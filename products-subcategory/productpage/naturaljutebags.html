@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f6ffec;
+        color: #0c4833;
+      }
+
+      .product-page {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+        gap: 3rem;
+      }
+
+      .product-image-section {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .main-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+
+      .thumbnail-gallery {
+        display: flex;
+        gap: 10px;
+        margin-top: 1rem;
+      }
+
+      .thumbnail-gallery img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .thumbnail-gallery img:hover {
+        border-color: #0c4833;
+      }
+
+      .product-info-section {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .product-info-section h2 {
+        font-family: "League Spartan", sans-serif;
+        font-size: 1.5rem;
+        color: #0c4833;
+        margin-bottom: 0.3rem;
+      }
+
+      .product-info-section h3 {
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .product-code {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1.5rem;
+      }
+
+      .product-code input {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid #333;
+        border-radius: 4px;
+        font-size: 1rem;
+        max-width: 100px;
+      }
+
+      .product-details {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+
+      .product-details strong {
+        color: #0c4833;
+      }
+
+      .enquiry-btn {
+        background-color: #0c4833;
+        color: #fff;
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: "League Spartan", sans-serif;
+      }
+
+      .enquiry-btn:hover {
+        background-color: #093524;
+      }
+
+      @media (max-width: 768px) {
+        .product-page {
+          flex-direction: column;
+          padding: 1rem;
+        }
+
+        .thumbnail-gallery {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="product-page">
+      <!-- 🖼️ Left Image Section -->
+      <div class="product-image-section">
+        <img
+          class="main-image"
+          src="../../images/abcd.png"
+          alt="Product Image"
+        />
+        <div class="thumbnail-gallery">
+          <img src="#" alt="thumb 1" />
+          <img src="#" alt="thumb 2" />
+          <img src="#" alt="thumb 3" />
+          <img src="#" alt="thumb 4" />
+        </div>
+      </div>
+
+      <!-- 📄 Right Product Info -->
+      <div class="product-info-section">
+        <h2>CATEGORY NAME:</h2>
+        <h3>Name of the product:</h3>
+
+        <div class="product-code">
+          <label for="code"><strong>Product Code:</strong></label>
+          <input type="text" id="code" value="NJBO1" readonly />
+        </div>
+
+        <div class="product-details">
+          <p>
+            <strong>Size:</strong> Fully Customizable as per your requirement
+          </p>
+          <p><strong>Fabric:</strong></p>
+          <p><strong>Handle Type:</strong></p>
+          <p>
+            <strong>Print Details:</strong> All types of print are available
+            depends on the Quantity
+          </p>
+          <p>
+            <strong>Other Customization:</strong> Ribbon, Charm, Button, Chain
+          </p>
+        </div>
+
+        <button class="enquiry-btn">Enquiry</button>
+      </div>
+    </section>
+  </body>
+</html>
