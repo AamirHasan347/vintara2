@@ -369,88 +369,104 @@
       }
     }
 
-    /* footer */
-    .v-footer {
-      background-image: url("../images/footerBackground.jpg");
-      background-size: cover;
-      background-position: center;
-      color: #f6ffec;
-      font-family: "Public Sans", sans-serif;
-      padding: 4rem 2rem 2rem 2rem;
-    }
+    /* General footer styling */
+footer {
+  background-image: url('../images/END\ BACKGROUND.jpg');
+  color: #eee;
+  padding: 40px 20px 20px;
+}
 
-    .v-footer-container {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 2rem;
-      text-align: center;
-    }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .v-footer-column {
-      flex: 1 1 300px;
-      color: #f6ffec;
-    }
+.footer-column {
+  flex: 1 1 250px;
+  margin: 30px;
+  min-width: 200px;
+}
 
-    .v-footer-column h4 {
-      font-family: "League Spartan", sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #ffffff;
-    }
+.footer-column h2 {
+  font-family: 'League Spartan', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
 
-    .v-footer-column p,
-    .v-footer-column a {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #f6ffec;
-      text-decoration: none;
-    }
+.footer-column p,
+.footer-column a {
+  color: #dfdfdf;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  font-family: 'Public Sans', sans-serif;
+}
 
-    .v-footer-column a:hover {
-      text-decoration: underline;
-    }
+.footer-column a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
 
-    .v-footer-logo img {
-      max-height: 200px; /* Increased from 100px */
-      margin: 0 auto;
-      display: block;
-      transition: transform 0.3s ease;
-    }
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .v-footer-logo img:hover {
-      transform: scale(1.05);
-    }
+.footer-column ul li {
+  margin-bottom: 8px;
+}
 
-    .v-footer-social {
-      margin-top: 2rem;
-      text-align: center;
-    }
+.products-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
-    .v-footer-social a {
-      color: #f6ffec;
-      margin: 0 12px;
-      font-size: 1.3rem;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
+.products-grid ul {
+  flex: 1 1 150px;
+}
 
-    .v-footer-social a:hover {
-      transform: translateY(-3px) scale(1.1);
-      color: #e4f3db;
-    }
+.social-icons {
+  margin-top: 15px;
+}
 
-    .v-footer-bottom {
-      margin-top: 2rem;
-      text-align: center;
-      font-family: "Playfair Display", cursive;
-      font-size: 1.05rem;
-      color: #f6ffec;
-      opacity: 0.95;
-    }
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 20px;
+  font-size: 20px;
+  color: #0c4833;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #689f38;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+#product-sidebar-list li a {
+  text-decoration: none;
+  color: inherit; /* keeps the same color as the surrounding text */
+  font-weight: bold; /* optional, matches your second image */
+}
 
     /* Responsive */
     @media (max-width: 768px) {
