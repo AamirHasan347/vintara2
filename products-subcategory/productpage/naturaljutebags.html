@@ -1,467 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NATURAL JUTE BAGS</title>
-    <link rel="stylesheet" href="about.css" />
-    <link rel="stylesheet" href="about.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Playfair+Display:ital@0;1&family=Public+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Product Enquiry</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Public+Sans&display=swap" rel="stylesheet">
   <style>
-    /* ROOT VARIABLES */
-    :root {
-      --primary: #0c4833;
-      --secondary: #f6ffec;
-      --accent: #0c4833;
-      --background: #f6ffec;
-      --text: #0c4833;
-      --font-title: "League Spartan", "Playfair Display", Arial, sans-serif;
-      --font-main: "Public Sans", "Inter", sans-serif;
-    }
-
-    /* GLOBAL RESET */
-    *,
-    *:before,
-    *:after {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
-      padding: 0;
-      font-family: var(--font-main);
-      background: var(--background);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* === NAVBAR === */
-    .v-sticky-navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 999;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
-        box-shadow 0.4s ease;
-    }
-
-    .v-sticky-navbar-transparent {
-      background: transparent;
-      backdrop-filter: none;
-      box-shadow: none;
-    }
-
-    .v-sticky-navbar-scrolled {
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 5px 20px rgba(12, 72, 51, 0.1);
-    }
-
-    .v-navbar-inner {
-      width: 100%;
-      max-width: 1440px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      height: 100%;
-    }
-
-    .v-navbar-left {
-      display: flex;
-      align-items: center;
-    }
-
-    .v-navbar-logo {
-      height: 256px;
-      margin: 32px 32px 0 0;
-      padding: 32px;
-      margin-right: 2rem;
-      transition: 0.3s ease;
-    }
-    .logo-green {
-      display: none;
-    }
-    .logo-white {
-      display: block;
-    }
-
-    /* Logo visibility on scroll */
-    .v-sticky-navbar-scrolled .logo-white {
-      display: none;
-    }
-    .v-sticky-navbar-scrolled .logo-green {
-      display: block;
-    }
-
-    .v-navbar-menu {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    /* Navbar links always green, never white */
-    .v-navbar-link {
-      font-family: var(--font-title);
-      font-size: 1.1rem;
-      font-weight: 700;
-      text-decoration: none;
-      color: #0c4833; /* Deep green */
-      transition: color 0.3s ease;
-      position: relative;
-    }
-    .v-navbar-link::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #0c4833; /* Deep green */
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease;
-    }
-    .v-navbar-link:hover::after {
-      width: 100%;
-    }
-    .v-sticky-navbar-scrolled .v-navbar-link {
+      background-color: #f6ffec;
+      font-family: 'Public Sans', sans-serif;
       color: #0c4833;
     }
-    .v-sticky-navbar-scrolled .v-navbar-link::after {
-      background: #0c4833;
-    }
-
-    /* ENQUIRE button */
-    .v-btn.v-navbar-enquire {
-      border: 2px solid #0c4833; /* Always deep green */
-      color: #0c4833;
-      background: transparent;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
+    #bold_details {
       font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      text-decoration: none; /* ✅ Fix underline */
-    }
-    .v-btn.v-navbar-enquire:hover {
-      background: #0c4833;
-      color: #fff;
-    }
-    .v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
-      border: 2px solid #0c4833;
       color: #0c4833;
-      background: white;
     }
-
-    @media (max-width: 1024px) {
-      .v-navbar-right .v-btn.v-navbar-enquire {
-        display: none !important;
-      }
-    }
-
-    /* === HAMBURGER MENU === */
-    .v-navbar-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 6px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 1200;
-    }
-    .v-navbar-hamburger span {
-      height: 3px;
-      width: 24px;
-      background: var(--primary);
-      border-radius: 3px;
-    }
-
-    @media (max-width: 1024px) {
-      .v-navbar-menu {
-        display: none !important;
-      }
-      .v-navbar-hamburger {
-        display: flex !important;
-      }
-      .v-navbar-right .v-btn.v-navbar-enquire {
-        display: none !important;
-      }
-    }
-
-    /* === MOBILE MENU === */
-    .v-navbar-mobile-menu {
-      display: none;
-      flex-direction: column;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 300px;
-      height: 100vh;
-      background: var(--secondary);
-      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-      padding: 5rem 2rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      z-index: 1100;
-    }
-    .v-navbar-mobile-menu.active {
-      transform: translateX(0%);
-      display: flex;
-    }
-
-    .v-navbar-mobile-menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .v-navbar-mobile-menu .v-navbar-link {
-      font-size: 1.2rem;
-      font-family: var(--font-title);
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    .v-navbar-mobile-menu .v-navbar-link:hover {
-      color: #176b4c;
-    }
-
-    .v-navbar-mobile-menu .v-btn.v-navbar-enquire {
-      margin-top: 1rem;
-      border: 2px solid var(--primary);
-      color: var(--primary);
-      background: transparent;
-      padding: 0.6rem 1.2rem;
-      font-weight: 600;
-      font-size: 1rem;
-      border-radius: 6px;
-      text-align: center;
-      text-decoration: none; /* ✅ Fix underline */
-    }
-
-    /* Responsive width on small screens */
-    @media (max-width: 480px) {
-      .v-navbar-mobile-menu {
-        width: 100%;
-        padding: 4rem 1.2rem;
-      }
-    }
-
-    /* Products grid */
-    :root {
-      --pista: #f6ffec;
-      --dark-green: #0c4833;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Public Sans", sans-serif;
-      background-color: var(--pista);
-      color: var(--dark-green);
-    }
-
-    .hero {
-      background: url("../../images/OUR PRODUCTS/BRAND PROMOTIONAL BAG HERO.png")
-        center/cover no-repeat;
-      height: 45vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-family: "League Spartan", sans-serif;
-      font-size: 5rem;
-      color: var(--dark-green);
-      /* Subtle, slightly blurry and translucent shadow */
-      text-shadow: 8px 8px 0 #6966666b, 0 2px 12px rgba(0, 0, 0, 0.18);
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem;
-      padding: 4rem;
-      background-color: var(--pista);
-    }
-
-    .product-card {
-      background-color: white;
-      border: 2px solid var(--dark-green);
-      border-radius: 12px;
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
-    }
-
-    .product-card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      object-position: bottom;
-    }
-
-    .product-card h2 {
-      font-family: "League Spartan", sans-serif;
-      font-size: 1.4rem;
-      padding: 1.2rem;
-      color: var(--dark-green);
-    }
-
-    .product-link {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.5rem;
-        padding: 0.5rem 1rem;
-      }
-      .product-card img {
-        height: 180px;
-      }
-    }
-
-    :root {
-      --green: #0c4833;
-      --bg-light: #f6ffec;
-      --font-title: "League Spartan", sans-serif;
-      --font-main: "Public Sans", sans-serif;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font-main);
-      background: var(--bg-light);
-      color: var(--green);
-    }
-
     .container {
-      max-width: 1280px;
+      display: flex;
+      padding: 40px;
+      gap: 40px;
+      max-width: 1200px;
       margin: auto;
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      align-items: stretch;
     }
 
-    .left-column,
-    .right-column {
-      flex: 1 1 500px;
+    .image-section {
+      flex: 1;
     }
 
-    .main-image {
+    .image-section img {
       width: 100%;
-      aspect-ratio: 4/3;
-      background: #ddd;
-      border-radius: 10px;
+      max-width: 350px;
+      height: 80%;
       object-fit: cover;
-    }
-
-    .thumbnails {
-      margin-top: 1rem;
+      border-radius: 10px;
       display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    .thumbnails div {
-      flex: 1 1 70px;
-      aspect-ratio: 1/1;
-      background: #ccc;
-      border-radius: 6px;
+    .content-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 2;
+      margin-left: 50px;
     }
 
-    .right-column {
-      background-color: var(--bg-light);
-      padding: 2rem;
-      border-radius: 8px;
-    }
-
-    .right-column h2 {
-      font-family: var(--font-title);
-      font-size: 1.3rem;
+    .category-name {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
       text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    .right-column h1 {
-      font-size: 2rem;
-      margin-top: 0.5rem;
+    .product-name {
+      font-family: "Alumni Sans Pinstripe", sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #000000c0;
+      margin: 0 0 30px;
     }
 
     .product-code {
-      margin: 1rem 0;
-      font-size: 1.2rem;
+      font-size: 16px;
+      align-items: center;
+      margin-bottom: 10px;
     }
 
     .product-code input {
-      font-size: 1.1rem;
-      padding: 0.4rem 0.8rem;
-      border: 2px solid var(--green);
+      padding: 5px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
       border-radius: 4px;
-      color: var(--green);
-      background: #fff;
+      margin-left: 10px;
+      width: 100px;
     }
 
     .divider {
       height: 1px;
-      background: #ccc;
-      margin: 1.5rem 0;
+      background-color: #ccc;
+      margin: 40px 0;
+      width: 100%;
     }
 
-    .details p {
-      margin: 0.4rem 0;
-      font-size: 1rem;
+    .details {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 0px;
+    }
+
+    .details div {
+      margin-bottom: 4px;
+      font-family: 'Public Sans', sans-serif;
+      color: #000000;
     }
 
     .details strong {
@@ -469,229 +104,125 @@
     }
 
     .enquiry-btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.8rem 2rem;
-      background: var(--green);
+      width: fit-content;
+      padding: 10px 30px;
+      background-color: #0c4833;
       color: white;
-      font-family: var(--font-title);
-      font-size: 1.5rem;
-      text-align: center;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
+      font-size: 20px;
+      font-family: 'Public Sans', sans-serif;
       cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s ease, box-shadow 0.3s, transform 0.2s;
-      box-shadow: 0 2px 8px rgba(12, 72, 51, 0.1);
+      transition: background-color 0.3s ease;
     }
 
     .enquiry-btn:hover {
-      background: #0a3d2a;
-      color: #e4f3db;
-      box-shadow: 0 8px 24px rgba(12, 72, 51, 0.18);
-      transform: translateY(-3px) scale(1.04);
+      background-color: #093625;
+    }
+    .thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
     }
 
-    @media (max-width: 768px) {
-      .right-column {
-        padding: 1.5rem 1rem;
-      }
+    .thumbnail {
+    width: 80px !important;
+   height: 80px !important;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  }
+  input[type="text"] {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
 
-      .right-column h1 {
-        font-size: 1.6rem;
-      }
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+  }
 
-      .product-code input {
-        width: 100%;
-        margin-top: 0.5rem;
-      }
+  .content-section {
+    margin-left: 0;
+  }
 
-      .enquiry-btn {
-        width: 100%;
-      }
-    }
-    /* Main product image */
-    .main-image-wrapper img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 12px;
-      background-color: #fff;
-    }
+  .thumbnail-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    /* Thumbnail row */
-    .thumbnail-row {
-      display: flex;
-      justify-content: flex-start;
-      gap: 1rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
+  .thumbnail {
+    width: 70px !important;
+    height: 70px !important;
+  }
 
-    .thumbnail-row img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 2px solid #ccc;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
+  .product-name {
+    font-size: 24px;
+    text-align: center;
+  }
 
-    .thumbnail-row img:hover {
-      transform: scale(1.05);
-      border-color: var(--green);
-    }
+  .category-name {
+    text-align: center;
+  }
 
-    .v-sticky-navbar-transparent .v-navbar-link {
-      color: #0c4833 !important;
-    }
-    .v-sticky-navbar-transparent .v-navbar-link::after {
-      background: #0c4833 !important;
-    }
-    .product-page-layout {
-      display: flex;
-      align-items: flex-start;
-      margin: 0;
-    }
+  .product-code {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .enquiry-btn {
+    align-self: center;
+  }
+
+  .details div {
+    font-size: 15px;
+  }
+}
+
   </style>
-  <body>
-    <!-- Sticky Premium Navbar -->
-    <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
-      <div class="v-navbar-inner">
-        <div class="v-navbar-left">
-          <!-- Two logos, toggle visibility with CSS -->
-          <img
-            src="../../images/vintaraLogoGreen.svg"
-            alt="Vintara Logo green"
-            class="v-navbar-logo logo-white"
-          />
-          <img
-            src="../../images/vintaraLogoGreen.svg"
-            alt="Vintara Logo Green"
-            class="v-navbar-logo logo-green"
-          />
+</head>
+<body>
 
-          <ul class="v-navbar-menu" id="navbarLinks">
-            <li><a href="../../index.html" class="v-navbar-link">Home</a></li>
-            <li>
-              <a href="../../products-main.html" class="v-navbar-link"
-                >Products</a
-              >
-            </li>
-            <li>
-              <a href="../../about.html" class="v-navbar-link">About Us</a>
-            </li>
-            <li><a href="../../blog.html" class="v-navbar-link">Blog</a></li>
-          </ul>
-        </div>
-        <div class="v-navbar-right">
-          <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
-          <button
-            class="v-navbar-hamburger"
-            id="vNavbarHamburger"
-            aria-label="Open menu"
-          >
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-      <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
-        <ul>
-          <li><a href="../../index.html" class="v-navbar-link">Home</a></li>
-          <li>
-            <a href="../../products-main.html" class="v-navbar-link"
-              >Products</a
-            >
-          </li>
-          <li><a href="../../about.html" class="v-navbar-link">About Us</a></li>
-          <li><a href="../../blog.html" class="v-navbar-link">Blog</a></li>
-          <li>
-            <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Main -->
-    <div class="container">
-      <!-- Left Column with Main Image and Thumbnails -->
-      <div class="left-column">
-        <!-- Main Image -->
-        <div class="main-image-wrapper">
-          <img
-            src="../../images/NATURAL JUTE BAGS/NJ01.png"
-            alt="Product Image"
-          />
-        </div>
-
-        <!-- Thumbnails -->
-        <div class="thumbnail-row">
-          <img
-            src="../../images/NATURAL JUTE BAGS/NJ02.jpg"
-            alt="Thumbnail 1"
-          />
-          <img
-            src="../../images/NATURAL JUTE BAGS/NJ03.png"
-            alt="Thumbnail 2"
-          />
-          <img
-            src="../../images/NATURAL JUTE BAGS/NJ04(IMAGE 1).png"
-            alt="Thumbnail 3"
-          />
-          <img
-            src="../../images/NATURAL JUTE BAGS/NJ05.png"
-            alt="Thumbnail 4"
-          />
-        </div>
-      </div>
-
-      <!-- Right Column with Product Info -->
-      <div class="right-column">
-        <h2>CATEGORY NAME:</h2>
-        <h1>Name of the product:</h1>
-        <div class="product-code">
-          <label for="code">Product Code: </label>
-          <input type="text" value="NJB01" id="code" readonly />
-        </div>
-        <div class="divider"></div>
-        <div class="details">
-          <p>
-            <strong>Size:</strong> Fully Customizable as per your requirement
-          </p>
-          <p><strong>Fabric:</strong></p>
-          <p><strong>Handle Type:</strong></p>
-          <p>
-            <strong>Print Details:</strong> All types of print are available
-            depends on the Quantity
-          </p>
-          <p>
-            <strong>Other Customization:</strong> Ribbon, Charm, Button, Chain
-          </p>
-        </div>
-        <a href="#enquire" class="enquiry-btn">Enquiry</a>
-      </div>
+  <div class="container">
+    <div class="image-section">
+      <img src="../images/NATURAL JUTE BAGS/NJ01.png" alt="Product Image">
+      <div class="thumbnail-container">
+  <img src="../images/NATURAL JUTE BAGS/NJ02.jpg" class="thumbnail">
+  <img src="../images/NATURAL JUTE BAGS/NJ03.png" class="thumbnail">
+  <img src="../images/NATURAL JUTE BAGS/NJ04(IMAGE 1).png" class="thumbnail">
+</div>
     </div>
+    <div class="content-section">
+      <div class="category-name">Category Name:</div>
+      <div class="product-name">Name of the product:</div>
+      <div class="product-code">
+        Product Code:
+        <input type="text" value="NJB01" readonly>
+      </div>
 
+      <div class="divider"></div>
 
-    <!-- Footer -->
- 
-    <div id="footer"></div>
-    <script>
-        $( "#footer" ).load( "../../footer.html" );
-      // Main image swap on thumbnail click
-      document.addEventListener("DOMContentLoaded", function () {
-        const mainImage = document.querySelector(".main-image-wrapper img");
-        const thumbnails = document.querySelectorAll(".thumbnail-row img");
-        thumbnails.forEach((thumb) => {
-          thumb.addEventListener("click", function () {
-            if (mainImage && thumb.src) {
-              mainImage.src = thumb.src;
-              mainImage.alt = thumb.alt;
-            }
-          });
-        });
-      });
-    </script>
-    <!-- Mobile Drawer Button (Fixed at bottom) -->
-  </body>
+      <div class="details">
+        <div><strong id="bold_details">Size: </strong>Fully Customizable as per your requirement</div>
+        <div><strong id="bold_details">Fabric: </strong>White Jute</div>
+        <div><strong id="bold_details">Handle Type: </strong>Jute rope Handle</div>
+        <div><strong id="bold_details">Print Details: </strong>All types of print are available depends on the Quantity</div>
+        <div><strong id="bold_details">Other Customization: </strong>Ribbon, Charm, Button, Chain</div>
+        <div><strong id="bold_details">Other details: </strong>Customizable Ribbon avaliable. Top-Zip Closure can be added</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <button class="enquiry-btn">Enquiry</button>
+    </div>
+  </div>
+
+</body>
 </html>
