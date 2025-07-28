@@ -192,11 +192,11 @@
 
   <div class="container">
     <div class="image-section">
-      <img src="../../images/NATURAL JUTE BAGS/NJ01.png" alt="Product Image">
+      <img src="../../images/NATURAL JUTE BAGS/NJ01.png" alt="Product Image" class="main-image">
       <div class="thumbnail-container">
-  <img src="../../images/NATURAL JUTE BAGS/NJ02.jpg" class="thumbnail">
-  <img src="../../images/NATURAL JUTE BAGS/NJ03.png" class="thumbnail">
-  <img src="../../images/NATURAL JUTE BAGS/NJ04(IMAGE 1).png" class="thumbnail">
+  <img src="../../images/NATURAL JUTE BAGS/NJ01.png" class="thumbnail">      
+  <!-- <img src="../../images/NATURAL JUTE BAGS/NJ02.jpg" class="thumbnail">
+  <img src="../../images/NATURAL JUTE BAGS/NJ03.png" class="thumbnail"> -->
 </div>
     </div>
     <div class="content-section">
@@ -223,6 +223,20 @@
       <button class="enquiry-btn">Enquiry</button>
     </div>
   </div>
+<script>
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const mainImage = document.querySelector('.main-image');
 
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      const newSrc = thumbnail.src;
+      mainImage.src = newSrc;
+
+      // Active thumbnail border logic (optional)
+      thumbnails.forEach(thumb => thumb.classList.remove('active-thumbnail'));
+      thumbnail.classList.add('active-thumbnail');
+    });
+  });
+</script>
 </body>
 </html>
