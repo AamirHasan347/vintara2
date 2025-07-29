@@ -768,6 +768,28 @@ body {
   background-color: #083926;
 }
 
+.product-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch; /* for smooth iOS scroll */
+}
+
+.product-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 220px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+
 /* Our Fabric */
 .fabric-section {
   background: url("images/HOME 5 BACKGROUND.jpg") center center / cover
