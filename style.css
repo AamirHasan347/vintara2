@@ -443,6 +443,15 @@ h3 {
   }
 }
 
+@media (max-width: 1648px) {
+  .v-hero-alt {
+    display: block;
+  }
+  .premium-hero {
+    display: none;
+  }
+}
+
 /* About Section */
 /* Prevent X-axis scrolling */
 body {
@@ -789,7 +798,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-
 /* Our Fabric */
 .fabric-section {
   background: url("images/HOME 5 BACKGROUND.jpg") center center / cover
@@ -950,6 +958,8 @@ body {
   border-radius: 2rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
   flex: 1 1 250px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   min-width: 220px;
 }
 
