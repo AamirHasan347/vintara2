@@ -470,7 +470,7 @@ body {
   flex-wrap: wrap; /* Ensures responsiveness */
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   background-image: url("images/HOME 2 BACKGROUND NEW.jpg");
   background-size: cover;
@@ -591,9 +591,65 @@ body {
   line-height: 1.5;
 }
 
+/* ===========================
+   📱 Responsive Styles (Mobile / Tablets)
+   =========================== */
+@media (max-width: 768px) {
+  .jute-section-with-bg {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .jute-frame-wrapper {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .jute-frame {
+    width: 90%;
+    aspect-ratio: 3 / 4;
+    transform: scale(1); /* Remove the scale on mobile */
+  }
+
+  .jute-content {
+    padding-left: 0;
+    padding-top: 1rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .jute-content h2 {
+    font-size: 2rem;
+  }
+
+  .jute-content .intro {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature p {
+    font-size: 0.9rem;
+  }
+
+  .about-feature-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 /* Why Us */
 .v-choose-exact {
-  height: 85vh;
+  /* height: 85vh; */
   background: url("images/HOME 3 BACKGROUND.jpg") center center / cover
     no-repeat;
   display: flex;
@@ -649,7 +705,7 @@ body {
 }
 
 .v-feature img {
-  height: 9 5px;
+  height: 95px;
   margin-bottom: 1rem;
   filter: brightness(0) invert(1); /* Make white */
 }
@@ -666,6 +722,43 @@ body {
   font-size: 0.92rem;
   line-height: 1.5;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .v-choose-exact {
+    height: auto;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .v-choose-heading {
+    font-size: 2rem;
+  }
+
+  .v-choose-pretitle {
+    font-size: 1.3rem;
+  }
+
+  .v-choose-subtext {
+    font-size: 0.98rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .v-choose-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .v-feature {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .v-feature img {
+    height: 75px; /* Adjust for better scaling */
+  }
 }
 
 /* Products Section */
