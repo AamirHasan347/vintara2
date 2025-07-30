@@ -838,6 +838,9 @@ footer {
 .products-grid ul {
   flex: 1 1 150px;
 }
+.product-card img {
+  border-radius: 3%;
+}
 
 .social-icons {
   margin-top: 15px;
