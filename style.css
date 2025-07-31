@@ -1188,7 +1188,7 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .testimonial-heading h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .testimonial-track {
@@ -1206,7 +1206,7 @@ body {
   }
 
   .testimonial-content {
-    padding: 1.5rem;
+    padding: 0.8rem 1rem 0.5rem 1rem;
     text-align: center;
   }
 
@@ -1227,11 +1227,11 @@ body {
 
 @media (max-width: 480px) {
   .testimonial-heading h2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
   .testimonial-content .quote {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .testimonial-card {
@@ -1261,8 +1261,8 @@ body {
 
 .testimonial-section h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 2.3rem;
+  margin-bottom: 0rem;
 }
 
 /* Scrollable container */
@@ -1285,7 +1285,7 @@ body {
   width: 320px; /* Or your preferred fixed width */
   flex-shrink: 0; /* Prevent it from shrinking inside flex */
   height: auto; /* Let height be based on content */
-  padding: 1.5rem;
+  padding: 1rem 1rem 0rem 1rem;
   border-radius: 12px;
   background: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
