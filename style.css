@@ -1624,21 +1624,24 @@ button:not(.testimonial-dot):focus {
   height: 100px;
   display: flex;
   align-items: center;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(12, 72, 51, 0.13);
   transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
     box-shadow 0.4s ease;
 }
-
-.v-sticky-navbar-transparent {
-  background: transparent;
-  backdrop-filter: none;
-  box-shadow: none;
-}
-
-.v-sticky-navbar-scrolled {
+/* 
+.v-sticky-navbar {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 20px rgba(12, 72, 51, 0.1);
-}
+} */
+
+/* .v-sticky-navbar-scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(12, 72, 51, 0.1);
+} */
 
 .v-navbar-inner {
   width: 100%;
@@ -1718,17 +1721,17 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
 }
 
 /* Remove color change on scroll */
-.v-sticky-navbar-scrolled .v-navbar-link {
+/* .v-sticky-navbar-scrolled .v-navbar-link {
   color: #0c4833;
 }
 .v-sticky-navbar-scrolled .v-navbar-link::after {
   background: #0c4833;
-}
+} */
 
 /* ENQUIRE button */
 .v-btn.v-navbar-enquire {
-  border: 2px solid white;
-  color: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
   background: transparent;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -1741,11 +1744,11 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   background: white;
   color: var(--primary);
 }
-.v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
+/* .v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
   border: 2px solid var(--primary);
   color: var(--primary);
   background: white;
-}
+} */
 
 @media (max-width: 1024px) {
   .v-navbar-right .v-btn.v-navbar-enquire {
