@@ -1199,7 +1199,9 @@ body {
   }
 
   .testimonial-image img {
-    border-radius: 8px 8px 0 0;
+    border-radius: 50%;
+    width: 120px; /* or any equal value */
+    height: 120px;
   }
 
   .testimonial-content {
@@ -1228,7 +1230,7 @@ body {
   }
 
   .testimonial-content .quote {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   .testimonial-card {
