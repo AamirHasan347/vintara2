@@ -1808,8 +1808,8 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 40vw;
-  max-width: 350px;
+  width: 30vw;
+  max-width: 280px;
   background: white;
   /* background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(18px) saturate(180%);
@@ -1984,7 +1984,7 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
 
 .v-faq-item {
   background: white;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   margin-bottom: 1.25rem;
   box-shadow: 0 5px 20px rgba(12, 72, 51, 0.05);
   overflow: hidden;
@@ -2000,7 +2000,7 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
 .v-faq-question {
   width: 100%;
   text-align: left;
-  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  padding: 10px;
   background: none;
   border: none;
   cursor: pointer;
@@ -2026,7 +2026,37 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   flex-shrink: 0;
   margin-left: 1rem;
 }
+.v-faq-icon::before,
+.v-faq-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #0c4833;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 2px;
+}
 
+.v-faq-icon::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.v-faq-icon::after {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.v-faq-item.active .v-faq-icon::after {
+  opacity: 0;
+  transform: translateX(-50%) scaleY(0);
+}
+
+/* 
 .v-faq-icon::before,
 .v-faq-icon::after {
   content: "";
@@ -2054,9 +2084,9 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
 
 .v-faq-item.active .v-faq-icon::after {
   opacity: 0;
-  transform: translateX(-50%) rotate(90deg);
+  transform: translateX(-50%) rotate(90deg); 
 }
-
+*/
 .v-faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -2077,10 +2107,10 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   transition: all 0.5s ease 0.1s;
 }
 
-.v-faq-item.active .v-faq-answer-content {
+/* .v-faq-item.active .v-faq-answer-content {
   opacity: 1;
   transform: translateY(0);
-}
+} */
 
 .v-faq-answer p {
   margin-bottom: 1rem;
