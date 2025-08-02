@@ -1808,11 +1808,12 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 45vw;
+  width: 40vw;
   max-width: 350px;
-  background: rgba(255, 255, 255, 0.95);
+  background: white;
+  /* background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(18px) saturate(180%);
-  box-shadow: 0 8px 32px rgba(12, 72, 51, 0.13);
+  box-shadow: 0 8px 32px rgba(12, 72, 51, 0.13); */
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
