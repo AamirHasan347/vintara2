@@ -289,10 +289,47 @@ body {
 @media (max-width: 480px) {
   .v-navbar-mobile-menu {
     width: 100%;
-    padding: 4rem 1.2rem;
+    padding: 4rem 1rem;
+  }
+
+  .v-navbar-mobile-menu .v-navbar-link {
+    font-size: 1.1rem;
+  }
+
+  .about-content h1 {
+    font-size: 1.8rem; /* Pick ONE consistent size */
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
   }
 }
 
+/* 768px and below */
+@media (max-width: 768px) {
+  .about-content h1 {
+    margin-bottom: 0.3rem;
+    line-height: 1.1;
+  }
+
+  .about-content h1 + h1 {
+    margin-top: 0;
+  }
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .v-navbar-mobile-menu {
+    width: 100%;
+    padding: 5rem 1.5rem;
+  }
+}
+
+/* 1024px and below */
 @media (max-width: 1024px) {
   .v-navbar-inner {
     padding: 0 1rem;
@@ -307,37 +344,6 @@ body {
   }
 
   .about-content p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-content h1 {
-    font-size: 2.4rem;
-  }
-  .about-content p {
-    font-size: 1rem;
-  }
-
-  .v-navbar-mobile-menu {
-    width: 100%;
-    padding: 5rem 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-content h1 {
-    font-size: 2rem;
-  }
-  .about-content p {
-    font-size: 0.95rem;
-  }
-
-  .v-navbar-mobile-menu {
-    padding: 4rem 1rem;
-  }
-
-  .v-navbar-mobile-menu .v-navbar-link {
     font-size: 1.1rem;
   }
 }
@@ -385,28 +391,6 @@ body {
   margin-bottom: 0.75rem;
   line-height: 1.6;
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .about-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .about-content p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .about-content p {
-    font-size: 0.95rem;
-  }
-}
-
 /* Our Values Section */
 .our-values {
   padding: 5rem 2rem;
