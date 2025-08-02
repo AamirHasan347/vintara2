@@ -2014,6 +2014,11 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   background-color: rgba(12, 72, 51, 0.02);
   transition: background-color 0.3s ease;
 }
+.v-faq-question {
+  display: flex;
+  justify-content: space-between; /* pushes the icon all the way to the right */
+  align-items: center;
+}
 
 .v-faq-question:hover {
   background-color: rgba(12, 72, 51, 0.05);
@@ -2026,37 +2031,7 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   flex-shrink: 0;
   margin-left: 1rem;
 }
-.v-faq-icon::before,
-.v-faq-icon::after {
-  content: "";
-  position: absolute;
-  background-color: #0c4833;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  border-radius: 2px;
-}
 
-.v-faq-icon::before {
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  transform: translateY(-50%);
-}
-
-.v-faq-icon::after {
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  transform: translateX(-50%);
-}
-
-.v-faq-item.active .v-faq-icon::after {
-  opacity: 0;
-  transform: translateX(-50%) scaleY(0);
-}
-
-/* 
 .v-faq-icon::before,
 .v-faq-icon::after {
   content: "";
@@ -2084,9 +2059,9 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
 
 .v-faq-item.active .v-faq-icon::after {
   opacity: 0;
-  transform: translateX(-50%) rotate(90deg); 
+  transform: translateX(-50%) rotate(90deg);
 }
-*/
+
 .v-faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -2107,10 +2082,10 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   transition: all 0.5s ease 0.1s;
 }
 
-/* .v-faq-item.active .v-faq-answer-content {
+.v-faq-item.active .v-faq-answer-content {
   opacity: 1;
   transform: translateY(0);
-} */
+}
 
 .v-faq-answer p {
   margin-bottom: 1rem;
@@ -2132,6 +2107,54 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   left: -1rem;
   color: #0c4833;
   font-weight: bold;
+}
+
+/* ─── ABSOLUTE ICON + ANIMATION ─── */
+.v-faq-question {
+  position: relative; /* container for absolute icon */
+  padding-right: 3rem !important; /* make room for the icon */
+  white-space: normal; /* allow question to wrap */
+}
+
+.v-faq-icon {
+  position: absolute !important;
+  top: 50% !important;
+  right: 1rem !important; /* distance from right edge */
+  width: 24px !important;
+  height: 24px !important;
+  transform: translateY(-50%) !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* build the plus from two bars */
+.v-faq-icon::before,
+.v-faq-icon::after {
+  content: "" !important;
+  position: absolute !important;
+  background-color: #0c4833 !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform-origin: center center !important;
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+.v-faq-icon::before {
+  width: 100% !important;
+  height: 2px !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+}
+
+.v-faq-icon::after {
+  width: 2px !important;
+  height: 100% !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+}
+
+/* on open: fade & rotate the vertical bar away */
+.v-faq-item.active .v-faq-icon::after {
+  opacity: 0 !important;
+  transform: translate(-50%, -50%) rotate(90deg) !important;
 }
 
 /* Decorative elements */
@@ -2171,8 +2194,8 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   }
 
   .v-faq-question {
-    font-size: 1.05rem;
-    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+    font-size: 0.5rem;
+    padding: 10px;
   }
 
   .v-faq-answer {
@@ -2202,6 +2225,40 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
     width: 20px;
     height: 20px;
   }
+}
+/* ─── MOBILE TEXT & PADDING OVERRIDES ─── */
+@media (max-width: 768px) {
+  .v-faq-question,
+  .v-faq-item.active .v-faq-question {
+    font-size: 1rem !important; /* smaller, fixed size */
+    padding: 1rem 1.5rem !important; /* add breathing space */
+  }
+
+  .v-faq-answer-content,
+  .v-faq-item.active .v-faq-answer-content {
+    font-size: 0.95rem !important; /* smaller answer text */
+    padding: 0.75rem 1.5rem 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .v-faq-question,
+  .v-faq-item.active .v-faq-question {
+    font-size: 0.95rem !important;
+    padding: 0.9rem 1.25rem !important;
+  }
+
+  .v-faq-answer-content,
+  .v-faq-item.active .v-faq-answer-content {
+    font-size: 0.9rem !important;
+    padding: 0.75rem 1.25rem 1.2rem !important;
+  }
+}
+
+/* ─── ENSURE ACTIVE STATE DOESN’T BUMP FONT-SIZE ─── */
+.v-faq-item .v-faq-question,
+.v-faq-item.active .v-faq-question {
+  font-size: inherit !important;
 }
 
 /* =================================Footer Section======================================= */
