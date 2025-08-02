@@ -1814,11 +1814,12 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 45vw;
-  max-width: 350px;
-  background: rgba(255, 255, 255, 0.95);
+  width: 30vw;
+  max-width: 280px;
+  background: white;
+  /* background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(18px) saturate(180%);
-  box-shadow: 0 8px 32px rgba(12, 72, 51, 0.13);
+  box-shadow: 0 8px 32px rgba(12, 72, 51, 0.13); */
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -1989,7 +1990,7 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
 
 .v-faq-item {
   background: white;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   margin-bottom: 1.25rem;
   box-shadow: 0 5px 20px rgba(12, 72, 51, 0.05);
   overflow: hidden;
@@ -2005,7 +2006,7 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
 .v-faq-question {
   width: 100%;
   text-align: left;
-  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  padding: 10px;
   background: none;
   border: none;
   cursor: pointer;
@@ -2018,6 +2019,11 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   color: #0c4833;
   background-color: rgba(12, 72, 51, 0.02);
   transition: background-color 0.3s ease;
+}
+.v-faq-question {
+  display: flex;
+  justify-content: space-between; /* pushes the icon all the way to the right */
+  align-items: center;
 }
 
 .v-faq-question:hover {
@@ -2109,6 +2115,54 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   font-weight: bold;
 }
 
+/* ─── ABSOLUTE ICON + ANIMATION ─── */
+.v-faq-question {
+  position: relative; /* container for absolute icon */
+  padding-right: 3rem !important; /* make room for the icon */
+  white-space: normal; /* allow question to wrap */
+}
+
+.v-faq-icon {
+  position: absolute !important;
+  top: 50% !important;
+  right: 1rem !important; /* distance from right edge */
+  width: 24px !important;
+  height: 24px !important;
+  transform: translateY(-50%) !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* build the plus from two bars */
+.v-faq-icon::before,
+.v-faq-icon::after {
+  content: "" !important;
+  position: absolute !important;
+  background-color: #0c4833 !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform-origin: center center !important;
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+.v-faq-icon::before {
+  width: 100% !important;
+  height: 2px !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+}
+
+.v-faq-icon::after {
+  width: 2px !important;
+  height: 100% !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+}
+
+/* on open: fade & rotate the vertical bar away */
+.v-faq-item.active .v-faq-icon::after {
+  opacity: 0 !important;
+  transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+
 /* Decorative elements */
 .v-faq-decoration {
   position: absolute;
@@ -2146,8 +2200,8 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
   }
 
   .v-faq-question {
-    font-size: 1.05rem;
-    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+    font-size: 0.5rem;
+    padding: 10px;
   }
 
   .v-faq-answer {
@@ -2177,6 +2231,40 @@ body:has(.v-sticky-navbar-transparent) .v-navbar-logo.logo-white {
     width: 20px;
     height: 20px;
   }
+}
+/* ─── MOBILE TEXT & PADDING OVERRIDES ─── */
+@media (max-width: 768px) {
+  .v-faq-question,
+  .v-faq-item.active .v-faq-question {
+    font-size: 1rem !important; /* smaller, fixed size */
+    padding: 1rem 1.5rem !important; /* add breathing space */
+  }
+
+  .v-faq-answer-content,
+  .v-faq-item.active .v-faq-answer-content {
+    font-size: 0.95rem !important; /* smaller answer text */
+    padding: 0.75rem 1.5rem 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .v-faq-question,
+  .v-faq-item.active .v-faq-question {
+    font-size: 0.95rem !important;
+    padding: 0.9rem 1.25rem !important;
+  }
+
+  .v-faq-answer-content,
+  .v-faq-item.active .v-faq-answer-content {
+    font-size: 0.9rem !important;
+    padding: 0.75rem 1.25rem 1.2rem !important;
+  }
+}
+
+/* ─── ENSURE ACTIVE STATE DOESN’T BUMP FONT-SIZE ─── */
+.v-faq-item .v-faq-question,
+.v-faq-item.active .v-faq-question {
+  font-size: inherit !important;
 }
 
 /* =================================Footer Section======================================= */

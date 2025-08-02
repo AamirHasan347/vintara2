@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
         otherItem.classList.remove("active");
       });
 
-      // Toggle current item
+      // Open the clicked item only if it was not already active
       if (!isActive) {
         item.classList.add("active");
       }
