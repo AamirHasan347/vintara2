@@ -55,6 +55,44 @@
 
     </nav>
 <style>
+  html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+body {
+  font-family: var(--font-main);
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  transition: var(--transition);
+  overflow-x: hidden;
+}
+
+header,
+section,
+footer {
+  width: 100%;
+}
+  :root {
+  --primary: #0c4833; /* Dark Green */
+  --secondary: #f6ffec; /* Pista */
+  --accent: #0c4833; /* Use dark green as accent for consistency */
+  --background: #f6ffec; /* Pista */
+  --text: #0c4833; /* Dark Green for text */
+  --cta: #0c4833; /* Dark Green for call to action */
+  --cta-gradient: linear-gradient(90deg, #0c4833 0%, #f6ffec 100%);
+  --shadow: 0 4px 24px rgba(12, 72, 51, 0.08);
+  --shadow-hover: 0 8px 32px rgba(12, 72, 51, 0.16);
+  --radius: 18px;
+  --font-title: "League Spartan", "Playfair Display", Arial, sans-serif;
+  --font-main: "Public Sans", "Inter", "DM Sans", Arial, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --section-padding: 5.5rem 0 4.5rem 0;
+  --container-max: 1200px;
+}
 /* === NAVBAR === */
 .v-sticky-navbar {
   position: fixed;
