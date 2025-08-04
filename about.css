@@ -895,6 +895,8 @@ footer {
 }
 
 .team-member {
+   text-decoration: none !important;
+  color: inherit !important;
   text-align: center;
   padding: 20px;
   background: transparent;
@@ -920,4 +922,15 @@ footer {
 .team-member p {
   font-family: public-sans, sans-serif;
   color: #2c2c2c;
+}
+/* Our team */
+.team-member a:hover {
+  text-decoration: none;
+}
+.team-member {
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.03); /* subtle zoom-in */
 }
