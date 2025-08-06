@@ -52,17 +52,15 @@
       flex: 1;
     }
 
-    .image-section img {
-      width: 100%;
-      max-width: 350px;
-      height: 91%;
-      object-fit: cover;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  .image-section img {
+  width: 125%;                  /* Fill parent width */
+  max-width: 600px;             /* Or more if you want larger */
+  aspect-ratio: 4 / 5;          /* Maintain 4:5 ratio */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;               /* Correct display for <img> */
+  height: auto;                 /* Let aspect-ratio manage height */
+}
 
     .content-section {
       display: flex;
