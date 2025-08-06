@@ -67,12 +67,12 @@
       flex-direction: column;
       justify-content: center;
       flex: 2;
-      margin-left: 100px;
+      margin-left: 120px;
     }
 
     .category-name {
       font-family: 'League Spartan', sans-serif;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 10px;
@@ -80,21 +80,21 @@
 
     .product-name {
       font-family: "Alumni Sans Pinstripe", sans-serif;
-      font-size: 30px;
+      font-size: 34px;
       font-weight: 700;
       color: #000000c0;
       margin: 0 0 30px;
     }
 
     .product-code {
-      font-size: 16px;
+      font-size: 18px;
       align-items: center;
       margin-bottom: 10px;
     }
 
     .product-code input {
-      padding: 5px 10px;
-      font-size: 14px;
+      padding: 10px 15px;
+      font-size: 19px;
       border: 1px solid #ccc;
       border-radius: 4px;
       margin-left: 10px;
@@ -109,7 +109,7 @@
     }
 
     .details {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.5;
       margin-bottom: 0px;
     }
@@ -131,7 +131,7 @@
       color: white;
       border: none;
       border-radius: 6px;
-      font-size: 20px;
+      font-size: 22px;
       font-family: 'Public Sans', sans-serif;
       cursor: pointer;
       transition: background-color 0.3s ease;
@@ -206,183 +206,6 @@
     font-size: 15px;
   }
 }
-/* === NAVBAR === */
-.v-sticky-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-.v-sticky-navbar-transparent {
-  background: transparent;
-  backdrop-filter: none;
-  box-shadow: none;
-}
-
-.v-sticky-navbar-scrolled {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 5px 20px rgba(12, 72, 51, 0.1);
-}
-
-.v-navbar-inner {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  height: 100%;
-}
-
-.v-navbar-left {
-  display: flex;
-  align-items: center;
-}
-
-.v-navbar-logo {
-  height: 256px;
-  margin: 32px 32px 0 0;
-  padding: 32px;
-  margin-right: 2rem;
-  transition: 0.3s ease;
-}
-.logo-green {
-  display: none;
-}
-.logo-white {
-  display: block;
-}
-
-/* Logo visibility on scroll */
-.v-sticky-navbar-scrolled .logo-white {
-  display: none;
-}
-.v-sticky-navbar-scrolled .logo-green {
-  display: block;
-}
-
-.v-navbar-menu {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.v-navbar-link {
-  font-family: var(--font-title);
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-  position: relative;
-}
-.v-navbar-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: white;
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s ease;
-}
-.v-navbar-link:hover::after {
-  width: 100%;
-}
-
-.v-sticky-navbar-scrolled .v-navbar-link {
-  color: var(--primary);
-}
-.v-sticky-navbar-scrolled .v-navbar-link::after {
-  background: var(--primary);
-}
-
-/* ENQUIRE button */
-.v-btn.v-navbar-enquire {
-  border: 2px solid white;
-  color: white;
-  background: transparent;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  text-decoration: none; /* ✅ Fix underline */
-}
-.v-btn.v-navbar-enquire:hover {
-  background: white;
-  color: var(--primary);
-}
-.v-sticky-navbar-scrolled .v-btn.v-navbar-enquire {
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  background: white;
-}
-
-@media (max-width: 1024px) {
-  .v-navbar-right .v-btn.v-navbar-enquire {
-    display: none !important;
-  }
-}
-
-/* === ABOUT HERO SECTION === */
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(12, 72, 51, 0.6); /* dark green overlay */
-/* z-index: 1;
-} */
-
-.about-hero {
-  position: relative;
-  width: 100%;
-  min-height: 75vh;
-  background-image: url("../../images/ABOUT\ 1\ BACKGROUND\ NEW.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: left;
-  padding: 6rem 2rem 4rem 2rem;
-}
-
-.about-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  color: white;
-  z-index: 100;
-}
-
-.about-content h1 {
-  font-family: var(--font-title);
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1.2rem;
-}
-
-.about-content p {
-  font-family: var(--font-main);
-  font-size: 1.3rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
 /* === HAMBURGER MENU === */
 .v-navbar-hamburger {
   display: none;
@@ -478,18 +301,6 @@
   .v-navbar-inner {
     padding: 0 1rem;
   }
-
-  .about-content {
-    padding: 2rem 1rem;
-  }
-
-  .about-content h1 {
-    font-size: 2.8rem;
-  }
-
-  .about-content p {
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -522,56 +333,6 @@
   </head>
   <body>
     <div id="header"></div>
-<!-- Sticky Premium Navbar -->
-    <nav class="v-sticky-navbar v-sticky-navbar-transparent" id="StickyNavbar">
-      <div class="v-navbar-inner">
-        <div class="v-navbar-left">
-          <!-- Two logos, toggle visibility with CSS -->
-          <img
-            src="../../images/vintaraLogoWhite.svg"
-            alt="Vintara Logo White"
-            class="v-navbar-logo logo-white"
-          />
-          <img
-            src="../../images/vintaraLogoGreen.svg"
-            alt="Vintara Logo Green"
-            class="v-navbar-logo logo-green"
-          />
-
-          <ul class="v-navbar-menu" id="navbarLinks">
-            <li><a href="index.html" class="v-navbar-link">Home</a></li>
-            <li>
-              <a href="products-main.html" class="v-navbar-link">Products</a>
-            </li>
-            <li><a href="about.html" class="v-navbar-link">About Us</a></li>
-            <li><a href="blog.html" class="v-navbar-link">Blog</a></li>
-          </ul>
-        </div>
-        <div class="v-navbar-right">
-          <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
-          <button
-            class="v-navbar-hamburger"
-            id="vNavbarHamburger"
-            aria-label="Open menu"
-          >
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-      <div class="v-navbar-mobile-menu" id="vNavbarMobileMenu">
-        <ul>
-          <li><a href="index.html" class="v-navbar-link">Home</a></li>
-          <li>
-            <a href="products-main.html" class="v-navbar-link">Products</a>
-          </li>
-          <li><a href="about.html" class="v-navbar-link">About Us</a></li>
-          <li><a href="blog.html" class="v-navbar-link">Blog</a></li>
-          <li>
-            <a href="#enquire" class="v-btn v-navbar-enquire">ENQUIRE</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   <div class="container">
     <div class="image-section">
       <img src="../../images/NATURAL JUTE BAGS/NJ01.png" alt="Product Image" class="main-image">
@@ -607,7 +368,7 @@
   </div>
   <div id="footer"></div>
     <script>
-      $("#header").load("header.html");
+      $("#header").load("/header.html");
         $( "#footer" ).load( "../../footer.html" );
   const thumbnails = document.querySelectorAll('.thumbnail');
   const mainImage = document.querySelector('.main-image');
