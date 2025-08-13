@@ -3,7 +3,7 @@ async function fetchForms() {
     const tbody = document.getElementById('formsTableBody');
     tbody.innerHTML = '<tr><td colspan="14">Loading...</td></tr>';
     try {
-        const res = await fetch('https://vintara.onrender.com/api/form');
+        const res = await fetch('https://vintara-backend-123.onrender.com/api/form');
         if (res.ok) {
             const data = await res.json();
             if (!data.length) {
@@ -37,3 +37,4 @@ async function fetchForms() {
 
 
 window.addEventListener('DOMContentLoaded', fetchForms);
+
